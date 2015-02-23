@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="utf-8">
+	<meta name = "descripcion" content = "Triqueando.la">
+	<title>Triqueando.la</title>
+	<link rel="stylesheet" type="text/css" href="/static/estilos.css" />
+	<link rel="stylesheet" type="text/css" href="/static/general.css" />
+	<link rel="stylesheet" type="text/css" href="/static/profesores.css">
+	<script src="/static/prefixfree.js"></script>
+</head>
+<body>
+	<!-- Constante -->
+	<header class = "cabecera">
+		<figure class = "cabecera-Logo">
+			<img class = "logo-Imagen" onclick = "True" src="/static/Logo.png">
+		</figure>
+		<div class = "cabecera-Buscador">
+			<form class = "buscador-Texto">
+				<ul>
+					<li><input type="text" id="busqueda" placeholder="Buscar"></li>
+					<li><input type="submit" value="Buscar" id="botonBuscar"></li>
+				</ul>
+			</form>
+		</div>
+		<div class = "cabecera-Login">
+			<button><a href = "#">Login</a></button>
+		</div>
+	</header>
+	<nav class = "navegador">
+		<ul class = "navegador-Lista">
+			<li><a href = "../"><strong>Inicio</strong></a></li>
+			<li><a href = "busqueda.html"><strong>Búsqueda avanzada</strong></a></li>
+			<li><a href = "profesores.html"><strong>Profesores</strong></a></li>
+		</ul>
+	</nav>
+	<!-- Variable -->
+	<section class = "perfil">
+		<figure class = "perfil-imagen">
+			<img  src = "/static/Persona.png">
+		</figure>
+		<div class = "perfil-datos">
+			<h2 class ="perfil-nombre" >{{profesor}}</h2>
+			<p class = "perfil-puntaje">Puntaje: <strong>{{profesor.puntajeP}}</strong></p>
+		</div>
+		<ul class = "perfil-cursos">
+			<li class = "perfil-cursos-titulo"><strong>Cursos</strong></li>
+			{%for dictado in profesor.dictado_set.all reversed%}
+				<li>{{dictado.curso}}</li>
+			{%endfor%}
+		</ul>
+		<div class = "perfil-puntajes">
+			<!-- Votos -->
+			<ul class = "perfil-puntajes-valores">
+				<p><strong>Exigencia: </strong>{{profesor.exigenciaP}}</p>
+				<p><strong>Pedadogía: </strong>{{profesor.pedagogiaP}}</p>
+				<p><strong>Conocimiento: </strong>{{profesor.conocimientoP}}</p>
+				<p><strong>Pasabilidad: </strong>{{profesor.pasabilidadP}}</p>
+			</ul>
+		</div>
+	</section>
+	<section class = "comentariosBox">
+		<header class = "comentariosBox-header">
+			<div class = "comentariosBox-header-descripcion">
+				<h2>Comentarios <span class = "comentariosBox-descripcion-nroComentarios">(20)</span></h2>
+			</div>
+			<nav class = "comentariosBox-header-cursos">
+				<ul>
+					{%for dictado in profesor.dictado_set.all%}
+					<li><a href="#" class="cursoButton" id="boton{{forloop.counter}}">{{dictado.curso.nombre}}</a></li>
+					{%endfor%}
+				</ul>	
+			</nav>
+		</header>
+		<section class = "comentariosBox-comentariosSet">
+			{%if profesor.dictado_set.all%}
+				{%for dictado in profesor.dictado_set.all%}
+					{% if forloop.first %}
+					<div class = "comentariosBox-comentariosSet-box{{forloop.counter}}" id="elected">
+						{%for comentario in dictado.comentario_set.all %}
+						<article>
+							<h3>{{comentario.autor}}</h3>
+							<h3>{{comentario.curso}}</h3>
+							<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+								<img src = "/static/Persona.png">
+							</figure>
+							<p>{{comentario.contenido}}</p>
+						</article >
+						{%endfor%}
+					</div>
+					{%else%}
+					<div class = "comentariosBox-comentariosSet-box{{forloop.counter}}">
+						{%for comentario in dictado.comentario_set.all %}
+						<article>
+							<h3>{{comentario.autor}}</h3>
+							<h3>{{comentario.curso}}</h3>
+							<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+								<img src = "/static/Persona.png">
+							</figure>
+							<p>{{comentario.contenido}}</p>
+						</article >
+						{%endfor%}
+					</div>
+					{%endif%}
+				{%endfor%}
+			{%endif%}
+		</section>
+		<section class = "comentariosBox-comentar">
+			<form class = "comentariosBox-form">
+				<label for="exigencia">Exigencia: </label>
+				<input type="range" id="exigencia" min="0" max="20" value="10" required>
+				<label for="pedagogia">Pedagogía: </label>
+				<input type="range" id="pedagogia" min="0" max="20" value="10" required>
+				<label for="conocimiento">Conocimiento: </label>
+				<input type="range" id="conocimiento" min="0" max="20" value="10" required>
+				<label for="pasabilidad">Pasabilidad: </label>
+				<input type="range" id="pasabilidad" min="0" max="20" value="10" required>
+				<input type="radio">Curso<br>
+				<label for="mensaje">Mensaje:</label>
+				<input type="text" id= "" placeholder="Escribir comentario">
+				<input type="submit" value="Enviar" id="botonSubmit">
+			</form>
+		</section>
+	</section>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="/static/cursoSeleccion.js"></script>
+</body>
+</html>
+	<!--  -->
+	<!--<section class = "seccion">
+		<h1 class = "seccion-Cabecera"><blockquote>Descubre a los mejores profesores de la facultad</blockquote></h1>
+		<div class = "seccion-Experiencia">
+
+			<div class = "experiencia-Texto">
+				<h2>Experiencia</h2>
+				<h3>Los 10 mejores</h3>
+			</div>
+
+			<div class = "experiencia-Cuadro">
+				<ul class = "cuadro-Lista">
+					<li>
+						<figure>
+								<img src="Persona.png">
+						</figure>
+						<div class = "Hola">
+							<p>Nombre</p>
+							<p>Cantidad comentarios</p>
+						</div>
+						<div class = "Hola,amigos">
+							<h3>Puntaje</h3>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p>Nombre</p>
+							<p>Cantidad comentarios</p>
+						</div>
+						<div>
+							<h3>Puntaje</h3>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p>Nombre</p>
+							<p>Cantidad comentarios</p>
+						</div>
+						<div>
+							<h3>Puntaje</h3>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p>Nombre</p>
+							<p>Cantidad comentarios</p>
+						</div>
+						<div>
+							<h3>Puntaje</h3>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class = "seccion-Pedagogia">
+
+			<div class = "pedagogia-Texto">
+				<h2>Pedagogía</h2>
+				<h3>Los 10 mejores</h3>
+			</div>
+
+			<div class = "pedagogia-Cuadro">
+				<ul class = "cuadro-Lista">
+
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p>Nombre</p>
+							<p>Cantidad comentarios</p>
+						</div>
+						<div>
+							<h3>Puntaje</h3>
+						</div>
+					</li>
+					<li>
+						<div>
+							<figure>
+								<img src="Persona.png">
+							</figure>
+						</div>
+						<div>
+							<p>Nombre</p>
+							<p>Cantidad comentarios</p>
+						</div>
+						<div>
+							<h3>Puntaje</h3>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p>Nombre</p>
+							<p>Cantidad comentarios</p>
+						</div>
+						<div>
+							<h3>Puntaje</h3>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p>Nombre</p>
+							<p>Cantidad comentarios</p>
+						</div>
+						<div>
+							<h3>Puntaje</h3>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class = "seccion-Conocimiento">
+
+			<div class = "conocimiento-Texto">
+				<h2>Conocimiento</h2>
+				<h3>Los 10 mejores</h3>
+			</div>
+
+			<div class = "conocimiento-Cuadro">
+				<ul class = "cuadro-Lista">
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p>Nombre</p>
+							<p>Cantidad comentarios</p>
+						</div>
+						<div>
+							<h3>Puntaje</h3>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p>Nombre</p>
+							<p>Cantidad comentarios</p>
+						</div>
+						<div>
+							<h3>Puntaje</h3>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p>Nombre</p>
+							<p>Cantidad comentarios</p>
+						</div>
+						<div>
+							<h3>Puntaje</h3>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p>Nombre</p>
+							<p>Cantidad comentarios</p>
+						</div>
+						<div>
+							<h3>Puntaje</h3>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class = "seccion-Pasabilidad">
+
+			<div class = "pasabilidad-Texto">
+				<h2>Pasabilidad</h2>
+				<h3>Los 10 mejores</h3>
+			</div>
+
+			<div class = "pasabilidad-Cuadro">
+				<ul class = "cuadro-Lista">
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p>Nombre</p>
+							<p>Cantidad comentarios</p>
+						</div>
+						<div>
+							<h3>Puntaje</h3>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p>Nombre</p>
+							<p>Cantidad comentarios</p>
+						</div>
+						<div>
+							<h3>Puntaje</h3>
+						</div>
+					</li>
+					<li>
+						<div>
+							<figure>
+								<img src="Persona.png">
+							</figure>
+						</div>
+						<div>
+							<p>Nombre</p>
+							<p>Cantidad comentarios</p>
+						</div>
+						<div>
+							<h3>Puntaje</h3>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p>Nombre</p>
+							<p>Cantidad comentarios</p>
+						</div>
+						<div>
+							<h3>Puntaje</h3>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="utf-8">
+	<meta name = "description" content = "Triqueando.la">
+	<title>Triqueando.la</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css" />
+	<link rel="stylesheet" type="text/css" href="general.css" />
+	<link rel="stylesheet" type="text/css" href="home.css">
+	<script src="prefixfree.js"></script>
+</head>
+<body>
+	<!-- Constante -->
+	<header class = "cabecera">
+		<div class = "cabecera-Logo">
+			<img class = "logo-Imagen" onclick = "True" src="Logo.png">
+		</div>
+		<div class = "cabecera-Buscador">
+			<form class = "buscador-Texto">
+				<input type="text" id="busqueda" placeholder="Buscar">
+			</form>
+			<div>
+				<button><a href = "#">Buscar</a></button>
+			</div>
+		</div>
+		<div class = "cabecera-Login">
+			<button><a href = "#">Login</a></button>
+		</div>
+	</header>
+	<nav class = "navegador">
+		<ul class = "navegador-Lista">
+			<li><a href = "home.html">Inicio</a></li>
+			<li><a href = "busqueda.html">Búsqueda avanzada</a></li>
+			<li><a href = "profesores.html">Profesores</a></li>
+		</ul>
+	</nav>
+	<!-- Variable -->
+	<div class = "barra">
+		<ul>
+			<li class = "barra-Eslogan">
+				<h2><em>Recomienda, valora y encuentra los mejores profesores.</em></h2>
+			</li>
+			<li class = "barra-Registrar">
+				<button><a href="#">Regístrate</a></button>
+			</li>
+		</ul>
+	</div>
+	<section class = "seccion">
+		<section class = "seccion-FraseCelebre">
+			<h3>Frase célebre</h3>
+			<p><blockquote><em>Esfúerzate y sé valiente<em></blockquote></p>
+		</section>
+		<aside class = "seccion-HomeCentral">
+			<div class = "homeCentral-Imagen">
+				<img class = "imagen-Random" onclick = "True" src = "Imagen.jpg">
+			</div>
+			<div class = "homeCentral-Comentarios">
+				<h2>Últimos comentarios</h2>
+				<a href="#">Ver todos</a>
+				<div class = "comentarios-Ultimos" ></div>
+			</div>
+			<div class = "homeCentral-ProfesoresTop">
+				<h2>Profesores más populares</h2>
+				<a href="#">Ver todos</a>
+				<div class = "profesores-Mejores">
+				</div>
+			</div>
+			<div class = "seccion-rightColumn">
+				<div class = "clent-rightColumn-Ranking">
+					<ul>
+						<li><a href="profesor.html">Profesor 01</a><p>X votos</p></li>
+						<li><a href="profesor.html">Profesor 02</a><p>X votos</p></li>
+						<li><a href="profesor.html">Profesor 03</a><p>X votos</p></li>
+						<li><a href="profesor.html">Profesor 04</a><p>X votos</p></li>
+						<li><a href="profesor.html">Profesor 05</a><p>X votos</p></li>
+						<li><a href="profesor.html">Profesor 06</a><p>X votos</p></li>
+						<li><a href="profesor.html">Profesor 07</a><p>X votos</p></li>
+						<li><a href="profesor.html">Profesor 08</a><p>X votos</p></li>
+						<li><a href="profesor.html">Profesor 09</a><p>X votos</p></li>
+						<li><a href="profesor.html">Profesor 10</a><p>X votos</p></li>
+					</ul>
+					<div class = "Content-rightColumn-Ranking-contentBox">
+
+					</div>
+				</div>
+				<div class = "Content-rightColumn-BestComment">
+					<h2>Valoración de la semana</h2>
+					<div class = "Content-rightColumn-BestComment-contentBox"></div>
+				</div>
+			</div>
+		</aside>
+	</section>
+	<aside class = "aside">
+		<header class = "aside-RankingResumido">
+			<div class = "rankingResumido-Botones">
+				<ul class = "botones-Lista">
+					<li><a href = "#">Exigencia</a></li>
+					<li><a href = "#">Pedagogía</a></li>
+					<li><a href = "#">Pasabilidad</a></li>
+					<li><a href = "#">Conocimiento</a></li>
+				</ul>
+			</div>
+			<div class = "rankingResumido-Contenido">
+				<header class = "contenido-Descripcion">
+					<div>
+						<h3>Ránking de Profesores</h3>
+					</div>
+					<div class = "descripcion-Ver">
+						<p>según nuestros usuarios</p>
+						<a href="#" class = "tabla-VerTodos">Ver todos</a>
+					</div>
+				</header>
+				<section class = "contenido-Clasificacion">
+					<div class = "clasificacion-Primeros">
+						<h3>Puntaje mayor a 17</h3>
+						<ul>
+							<li><a href="profesores.html">...</a></li>
+							<li><a href="profesores.html">...</a></li>
+							<li><a href="profesores.html">...</a></li>
+						</ul>
+					</div>
+					<div class = "clasificacion-Segundos">
+						<h3>Puntaje de 14 a 17</h3>
+						<ul>
+							<li><a href="profesores.html">...</a></li>
+							<li><a href="profesores.html">...</a></li>
+							<li><a href="profesores.html">...</a></li>
+						</ul>
+					</div>
+					<div class = "clasificacion-Terceros">
+						<h3>Puntaje de 10 a 13</h3>
+						<ul>
+							<li><a href="profesores.html">...</a></li>
+							<li><a href="profesores.html">...</a></li>
+							<li><a href="profesores.html">...</a></li>
+						</ul>
+					</div>
+					<div class = "clasificacion-Cuartos">
+						<h3>Puntaje menor a 10</h3>
+						<ul>
+							<li><a href="profesores.html">...</a></li>
+							<li><a href="profesores.html">...</a></li>
+							<li><a href="profesores.html">...</a></li>
+						</ul>
+					</div>
+				</section>
+			</div>
+		</header>
+		<footer class = "aside-ComentarioSemana">
+			<div class = "comentarioSemana-Descripcion">
+				<h3>Comentario de la semana</h3>
+			</div>
+			<div class = "comentarioSemana-Contenido">
+				<div class = "comentario-Semana">
+					<!-- Llamada al comentario -->
+					<input type="text" id="comentario-Semana">
+					<!-- <blockquote>Aquí va el comentario</blockquote> -->
+				</div>
+				<a href="profesores.html">Ver comentario</a>
+			</div>
+		</footer>
+	</aside>
+	<footer class = "pie">
+		<p>©ChichaCode 2013-2020</p>
+	</footer>
+</body>
+</html>

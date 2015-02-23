@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="utf-8">
+	<meta name = "descripcion" content = "Triqueando.la">
+	<title>Triqueando.la</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css" />
+	<link rel="stylesheet" type="text/css" href="general.css" />
+	<link rel="stylesheet" type="text/css" href="profesores.css">
+	<script src="prefixfree.js"></script>
+</head>
+<body>
+	<!-- Constante -->
+	<header class = "cabecera">
+		<div class = "cabecera-Logo">
+			<img class = "logo-Imagen" onclick = "True" src="Logo.png">
+		</div>
+		<div class = "cabecera-Buscador">
+			<div class = "buscador-Texto">
+				<input type="text" id="busqueda" placeholder="Buscar">
+			</div>
+			<div class = "buscador-Boton">
+				<button>Buscar</button>
+			</div>
+		</div>
+		<div class = "cabecera-Login">
+			<button>Login</button>
+		</div>
+	</header>
+	<nav class = "navegador">
+		<ul class = "navegador-Lista">
+			<li><a href = "home.html">Inicio</a></li>
+			<li><a href = "busqueda.html">Búsqueda avanzada</a></li>
+			<li><a href = "profesores.html">Profesores</a></li>
+		</ul>
+	</nav>
+	<!-- Variable -->
+	<section class = "perfil">
+		<figure class = "perfil-imagen">
+			<img  src = "Persona.png">
+		</figure>
+		<div class = "perfil-datos">
+			<h2 class ="perfil-nombre" >Nombre Profesor</h2>
+			<p class = "perfil-puntaje">Puntaje: <strong>X puntos</strong></p>
+		</div>
+		<ul class = "perfil-cursos">
+			<li class = "perfil-cursos-titulo"><strong>Cursos</strong></li>
+			<li>Curso 1</li>
+			<li>Curso 2</li>
+		</ul>
+		<div class = "perfil-puntajes">
+			<!-- Votos -->
+			<ul class = "perfil-puntajes-valores">
+				<p><strong>Exigencia: </strong> 20</p>
+				<p><strong>Pedadogía: </strong> 20</p>
+				<p><strong>Conocimiento: </strong> 20</p>
+				<p><strong>Pasabilidad: </strong> 20</p>
+			</ul>
+		</div>
+	</section>
+	<section class = "comentariosBox">
+		<header class = "comentariosBox-header">
+			<div class = "comentariosBox-header-descripcion">
+				<h2>Comentarios <span class = "comentariosBox-descripcion-nroComentarios">(20)</span></h2>
+			</div>
+			<nav class = "comentariosBox-header-cursos">
+				<ul>
+					<li><a href="#" class="cursoButton" id="boton1">Curso1</a></li>
+					<li><a href="#" class="cursoButton" id="boton2">Curso2</a></li>
+					<li><a href="#" class="cursoButton" id="boton3">Curso3</a></li>
+				</ul>	
+			</nav>
+		</header>
+		<section class = "comentariosBox-comentariosSet">
+			<div class = "comentariosBox-comentariosSet-box1" id="elected">
+				<article>
+					<h3>Nombre1</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article >
+				<article>
+					<h3>Nombre2</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+				<article>
+					<h3>Nombre3</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+				<article>
+					<h3>Nombre4</h3>
+					<h3>Curso</h3>
+					<figure class = "usuario-Comentario-04">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+			</div>
+			<div class = "comentariosBox-comentariosSet-box2">
+				<article>
+					<h3>Nombre5</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article >
+				<article>
+					<h3>Nombre6</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+				<article>
+					<h3>Nombre7</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+				<article>
+					<h3>Nombre8</h3>
+					<h3>Curso</h3>
+					<figure class = "usuario-Comentario-04">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+			</div>
+			<div class = "comentariosBox-comentariosSet-box3">
+				<article>
+					<h3>Nombre9</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article >
+				<article>
+					<h3>Nombre10</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+				<article>
+					<h3>Nombre11</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+				<article>
+					<h3>Nombre12</h3>
+					<h3>Curso</h3>
+					<figure class = "usuario-Comentario-04">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+			</div>
+		</section>
+		<section class = "comentariosBox-comentar">
+			<form class = "comentariosBox-form">
+				<label for="exigencia">Exigencia: </label>
+				<input type="range" id="exigencia" min="0" max="20" value="10" required>
+				<label for="pedagogia">Pedagogía: </label>
+				<input type="range" id="pedagogia" min="0" max="20" value="10" required>
+				<label for="conocimiento">Conocimiento: </label>
+				<input type="range" id="conocimiento" min="0" max="20" value="10" required>
+				<label for="pasabilidad">Pasabilidad: </label>
+				<input type="range" id="pasabilidad" min="0" max="20" value="10" required>
+				<input type="radio">Curso<br>
+				<label for="mensaje">Mensaje:</label>
+				<input type="text" id= "" placeholder="Escribir comentario">
+				<input type="submit" value="Enviar" id="botonSubmit">
+			</form>
+		</section>
+	</section>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="rankingSeleccion.js"></script>
+</body>
+</html>

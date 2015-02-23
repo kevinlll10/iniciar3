@@ -1,0 +1,271 @@
+/*div*/
+
+footer{
+	position:absolute;
+	text-align: center;
+	width:100%;
+	top: 82em;
+	background: red;
+}
+
+.barra{
+
+}
+
+.barra h2{
+	width: 60%;
+	float: left;
+	color: #778899;
+	text-align: center;
+}
+
+.barra button {
+	float: left;
+	margin: 1.3em 0em 0em 15em;
+}
+
+.barra-Eslogan{
+	float: left;
+	text-align: center;
+}
+
+.barra-Registrar{
+	float: right;
+	padding-left: 23em;
+	padding-top: 1.4em;
+}
+
+/*Section*/
+
+.seccion{
+	float: left;
+	margin: 0;
+	padding: 0.2em;
+	width: 68%;
+}
+
+.seccion-FraseCelebre{
+	background: #E6E6FA;
+	/*border-style: solid;
+	border-width: 0.2px;*/
+	border-radius: 10px;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+	float: left;
+	width: 30%;
+}
+
+.seccion-FraseCelebre1{
+	background: #54738F;
+	color: white;
+	padding: 0.2em 1em 0.2em 1em;
+	margin: 0em;
+	overflow: hidden;
+}
+
+.seccion-FraseCelebre2{
+	margin-left: 1em;
+}
+
+#first{
+	margin-bottom: 1em; 
+	margin-top: 10em;
+}
+
+#second{
+	float: right;
+	margin-bottom: 28em; 
+	margin-right: 1em;
+}
+
+.seccion-HomeCentral{
+	background: #E6E6FA;
+	/*border-style: solid;
+	border-width: 0.2px;*/
+	border-radius: 10px;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+	float: right;
+	margin-left: 1em;
+	width: 68%;
+}
+
+.seccion-HomeCentral h2{
+	background: #54738F;
+	color: white;
+	padding: 1em 1em 1em 1em;
+	margin: 0em;
+	overflow: hidden;
+}
+
+.homeCentral-Imagen img{
+	border-radius: 10px;
+	margin: 1.5em;
+	margin-top: 2.5em;
+	width: 92%;
+}
+
+.homeCentral-Comentarios{
+	margin-top: 3em;
+	margin-left: 0em;
+}
+
+.homeCentral-Comentarios h2{
+	background: #54738F;
+	color: white;
+	padding: 1em 1em 1em 1em;
+	margin: 0em;
+	overflow: hidden;
+}
+
+.comentarios-Ultimos{
+	list-style: none;
+}
+
+.comentarios-Ultimos li{
+	float: left;
+	width: 50%;
+}
+
+#comentarios-Todos{
+	margin-left: 1em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.homeCentral-ProfesoresTop{
+	margin-top: 3em;
+	margin-left: 0em;
+}
+
+.homeCentral-ProfesoresTop h2{
+	background: #54738F;
+	color: white;
+	padding: 0.7em 1em 0.7em 1em;
+	margin: 0em;
+	overflow: hidden;
+}
+
+.profesoresTop-Ranking ul{
+	list-style: none;
+}
+
+.ranking-Lista li{
+	float: left;
+	width: 50%;
+}
+
+/*aside*/
+.aside{
+	background: #E6E6FA;
+	/*border-style: solid;
+	border-width: 0.2px;*/
+	border-radius: 10px;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+	float: right;
+	width: 27%;
+}
+
+.aside-RankingResumido{
+	margin-left: 0em;
+}
+
+.rankingResumido-Botones{
+	background: #54738F;
+	border-style: solid;
+	border-width: 1px;
+	color: white;
+	margin: 0em;
+	padding: 0.4em 0.2em 0.4em 0.4em;
+	overflow: hidden;
+	box-decoration-break:
+}
+
+.rankingResumido-Botones a{
+	color: white;
+	display: inline;
+	font-size: 14px;
+	border-radius: 10px;
+	margin-left: 0.2em;
+	text-decoration: none;
+	-webkit-transition: 0.3s
+}
+
+.rankingResumido-Botones a:hover{
+	background: #2C5378;
+}
+
+.rankingResumido-Contenido h2{
+	background: #54738F;
+	color: white;
+	margin: 0em;
+	padding: 0.4em 1em 0.4em 1em;
+	overflow: hidden;
+}
+
+.rankingResumido-Contenido p{
+	float: left;
+	margin: 1em;
+	width: 70%;
+}
+
+.rankingResumido-Contenido a{
+	float: right;
+	margin-right: 0em;
+	width: 25%;
+}
+
+.rankingResumido-Clasificacion-1{
+	float: left;
+	margin-left: 1em;
+	display: none;
+}
+
+.rankingResumido-Clasificacion-2{
+	float: left;
+	margin-left: 1em;
+	display: none;
+}
+
+.rankingResumido-Clasificacion-3{
+	float: left;
+	margin-left: 1em;
+	display: none;
+}
+
+.rankingResumido-Clasificacion-4{
+	float: left;
+	margin-left: 1em;
+	display: none;
+}
+
+#elected{
+	display: block;
+}
+
+.aside-ComentarioSemana{
+	float: left;
+	margin-left: 0em;
+	margin-top: 3em;
+}
+
+.aside-ComentarioSemana p{
+	margin-left: 1em;
+}
+
+.aside-ComentarioSemana h2{
+	background: #54738F;
+	color: white;
+	margin: 0em;
+	overflow: hidden;
+	padding: 0.7em 1em 0.7em 1em;
+}
+
+.aside-ComentarioSemana a{
+	float: right;
+	margin-bottom: 14.5em;
+}
+
+/*footer*/
+.footer{
+	margin-top: 20em;
+	vertical-align: center;
+}

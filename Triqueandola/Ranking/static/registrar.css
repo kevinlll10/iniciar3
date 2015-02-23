@@ -1,0 +1,49 @@
+.seccion{
+	background: #E6E6FA;
+	border-radius: 10px;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+	margin: 2em 5em 2em 5em;
+	overflow: hidden;
+}
+
+.seccion h2{
+	background: #54738F;
+	color: white;
+	padding: 1em 1em 1em 1em;
+	margin: 0em;
+	text-transform: uppercase;
+}
+
+.seccion-Formulario{
+	margin: 2em 0 2em 2em;
+}
+
+#nombre{
+	margin-left: 2.5em;
+}
+
+#correo{
+	margin-left: 3em;
+}
+
+#contrasenia{
+	margin-left: 1em;
+}
+
+#contrasenia2{
+	margin-left: 0.3em;
+}
+
+#nacimiento{
+	margin-left: 0.8em;
+}
+
+#botonSubmit{
+	border-radius: 5px;
+	padding: 4px;
+	margin: 2em 0 0 3.5em;
+}
+
+#botonSubmit:hover{
+	opacity: 0.9;
+}

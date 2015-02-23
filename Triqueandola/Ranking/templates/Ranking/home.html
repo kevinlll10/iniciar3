@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="utf-8">
+	<meta name = "description" content = "Triqueando.la">
+	<title>Triqueando.la</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/static/estilos.css" />
+	<link rel="stylesheet" type="text/css" href="/static/general.css" />
+	<link rel="stylesheet" type="text/css" href="/static/home.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/static/prefixfree.js">
+
+	</script>
+</head>
+<body>
+	<!-- Constante -->
+	<header class = "cabecera">
+		<figure class = "cabecera-Logo">
+			<img class = "logo-Imagen" onclick = "True" src="/static/Logo.png">
+		</figure>
+		<form class = "cabecera-Buscador">
+			<ul>
+				<li><input type="text" id="busqueda" placeholder="Buscar"></li>
+				<li><input type="submit" value="Buscar" id="botonBuscar"></li>
+			</ul>
+		</form>
+		<div class = "cabecera-Botones">
+			<button id="botones-Login"><a href = "#">Login</a></button>
+			<button id="botones-Agregar"><a href = "agregarProfesor.html">Agregar profesor</a></button>
+			<button id="botones-Agregar2"><a href = "agregarCurso.html">Agregar curso</a></button>
+		</div>
+	</header>
+	<nav class = "navegador">
+		<ul class = "navegador-Lista">
+			<li><a href = "home.html"><strong>Inicio</strong></a></li>
+			<li><a href = "busqueda.html"><strong>Búsqueda avanzada</strong></a></li>
+			<li><a href = "profesores.html"><strong>Profesores</strong></a></li>
+		</ul>
+	</nav>
+	<!-- Variable -->
+	<div class = "barra">
+		<h2>Recomienda, valora y encuentra los mejores profesores.</h2>
+		<button><a href="registrar.html">Regístrate</a></button>	
+	</div>
+	<section class = "seccion">
+		<div class = "seccion-FraseCelebre">
+			<h2 id="descripcion">Frase célebre</h2>
+			<h3 id="frase"><em><strong>"Esfúerzate y sé valiente".</strong></em></h3>
+			<h4 id="profesor"><em><strong>Prof. Simpe Laura</strong></em></h4>
+		</div>
+		<div class = "seccion-HomeCentral">
+			<div class = "homeCentral-Presentacion">
+				<h2>Presentación</h2>
+				<figure class = "presentacion-Imagen">
+					<img class = "imagen-Random" onclick = "True" src = "/static/Imagen.jpg">
+				</figure>
+			</div>
+			<div class = "homeCentral-Comentarios">
+				<h2>Últimos comentarios</h2>
+				{% for comentario in comentarios reversed %}
+				<section = "comentarios-Seccion">
+					<figure>
+						<img src="/static/Persona.png">
+					</figure>
+					<div>
+						<p>{{comentario.contenido}}</p>
+						<label>sobre <a href="profesor.html">{{comentario.cursoDictado.profesor.nombre}}</a></label>
+					</div>
+				</section>
+				{% endfor %}
+				<a id="ver" href="profesores.html">Ver todos</a>
+			</div>
+			<div class = "homeCentral-ProfesoresTop">
+				<h2>Profesores más populares</h2>
+				{%for profesor in profesoresOrdenados reversed%}
+				<div>
+					<label>{{profesor.nombre}}</label>
+					<label><strong>Ptj: {{profesor.puntajeP}}</strong></label>
+				</div>
+				{%endfor%}
+				<a id="ver" href="profesores.html">Ver todos</a>
+			</div>
+		</div>
+	</section>
+	<aside class = "aside">
+		<div class = "aside-RankingResumido">
+			<div class = "rankingResumido-Botones">
+				<a href = "#" id = "boton1">Exigencia</a>
+				<a href = "#" id = "boton2">Pedagogía</a>
+				<a href = "#" id = "boton3">Pasabilidad</a>
+				<a href = "#" id = "boton4">Conocimiento</a>
+			</div>
+			<div class = "rakingResumido-Descripcion">
+				<h2>Ránking de Profesores</h2>
+			</div>
+			<div class = "rankingResumido-Clasificacion">
+				<a id="verTodos" href="profesores.html" class = "tabla-VerTodos">Ver todos</a>
+				<div class = "clasificacion-1" id="elected">
+					<section class = "clasificacion-Primeros">
+						<h3>Muy exigente</h3>
+						{% for profesor in rankings.exigencia.mayores reversed%}
+						<label><a href="profesorPerfil.html">{{profesor.nombre}}</a></label>
+						<br>
+						{% endfor%}
+					</section>
+					<section class = "clasificacion-Segundos">
+						<h3>Medianamente exigente</h3>
+						{% for profesor in rankings.exigencia.medianos reversed%}
+						<label><a href="profesorPerfil.html">{{profesor.nombre}}</a></label>
+						<br>
+						{% endfor %}
+					</section>
+					<section class = "clasificacion-Terceros">
+						<h3>Poco exigente</h3>
+						{% for profesor in rankings.exigencia.menores reversed%}
+						<label><a href="profesorPerfil.html">{{profesor.nombre}}</a></label>
+						<br>
+						{%endfor%}
+					</section>
+				</div>
+				<div class = "clasificacion-2">
+					<section class = "clasificacion-Primeros">
+						<h3>Muy buena pedagogía</h3>
+						{% for profesor in rankings.pedagogia.mayores reversed%}
+						<label><a href="profesorPerfil.html">{{profesor.nombre}}</a></label>
+						<br>
+						{% endfor%}
+					</section>
+					<section class = "clasificacion-Segundos">
+						<h3>Pedagogía promedio</h3>
+						{% for profesor in rankings.pedagogia.medianos reversed%}
+						<label><a href="profesorPerfil.html">{{profesor.nombre}}</a></label>
+						<br>
+						{% endfor %}
+					</section>
+					<section class = "clasificacion-Terceros">
+						<h3>Mala pedagogía</h3>
+						{% for profesor in rankings.pedagogia.menores reversed%}
+						<label><a href="profesorPerfil.html">{{profesor.nombre}}</a></label>
+						<br>
+						{%endfor%}
+					</section>
+				</div>
+				<div class = "clasificacion-3">
+					<section class = "clasificacion-Primeros">
+						<h3>Pasabilidad alta</h3>
+						{% for profesor in rankings.pasabilidad.mayores reversed%}
+						<label><a href="profesorPerfil.html">{{profesor.nombre}}</a></label>
+						<br>
+						{% endfor%}
+					</section>
+					<section class = "clasificacion-Segundos">
+						<h3>Pasabilidad media</h3>
+						{% for profesor in rankings.pasabilidad.medianos reversed%}
+						<label><a href="profesorPerfil.html">{{profesor.nombre}}</a></label>
+						<br>
+						{% endfor %}
+					</section>
+					<section class = "clasificacion-Terceros">
+						<h3>Pasabilidad baja</h3>
+						{% for profesor in rankings.pasabilidad.menores reversed%}
+						<label><a href="profesorPerfil.html">{{profesor.nombre}}</a></label>
+						<br>
+						{%endfor%}
+					</section>
+				</div>
+				<div class = "clasificacion-4">
+					<section class = "clasificacion-Primeros">
+						<h3>Alto conocimiento</h3>
+						{% for profesor in rankings.conocimiento.mayores reversed%}
+						<label><a href="profesorPerfil.html">{{profesor.nombre}}</a></label>
+						<br>
+						{% endfor%}
+					</section>
+					<section class = "clasificacion-Segundos">
+						<h3>Conocimiento intermedio</h3>
+						{% for profesor in rankings.conocimiento.medianos reversed%}
+						<label><a href="profesorPerfil.html">{{profesor.nombre}}</a></label>
+						<br>
+						{% endfor %}
+					</section>
+					<section class = "clasificacion-Terceros">
+						<h3>Bajo conocimiento</h3>
+						{% for profesor in rankings.conocimiento.menores reversed%}
+						<label><a href="profesorPerfil.html">{{profesor.nombre}}</a></label>
+						<br>
+						{%endfor%}
+					</section>
+				</div>
+			</div>
+		</div>
+		<div class = "aside-ComentarioSemana">
+			<h2>Comentario de la semana</h2>
+			<figure>
+				<img src="/static/Persona.png">
+			</figure>
+			<div>
+				<h4>Nombre</h4>
+				<h5>Comentario aquí</h5>
+				<a href="#"><strong>sobre Profesor</strong></a>
+			</div>
+		</div>
+	</aside>
+	<script src="/static/rankingSeleccion.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="utf-8">
+	<meta name = "description" content = "Triqueando.la">
+	<title>Triqueando.la</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/static/estilos.css">
+	<link rel="stylesheet" type="text/css" href="/static/general.css" />
+	<link rel="stylesheet" type="text/css" href="/static/busqueda.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/static/prefixfree.js">
+
+	</script>
+</head>
+<body>
+	<!-- Constante -->
+	<header class = "cabecera">
+		<figure class = "cabecera-Logo">
+			<img class = "logo-Imagen" onclick = "True" src="/static/Logo.png">
+		</figure>
+		<form class = "cabecera-Buscador" method="GET" action=".">
+			<ul>
+				<li><input type="text" name="busqueda" id="busqueda" placeholder="Buscar"></li>
+				<li><input type="submit" value="Buscar" id="botonBuscar"></li>
+			</ul>
+		</form>
+		<div class = "cabecera-Botones">
+			<button id="botones-Login"><a href = "#">Login</a></button>
+			<button id="botones-Agregar"><a href = "agregarProfesor.html">Agregar profesor</a></button>
+			<button id="botones-Agregar2"><a href = "agregarCurso.html">Agregar curso</a></button>
+		</div>
+	</header>
+	<nav class = "navegador">
+		<ul class = "navegador-Lista">
+			<li><a href = "home.html"><strong>Inicio</strong></a></li>
+			<li><a href = "busqueda.html"><strong>Búsqueda avanzada</strong></a></li>
+			<li><a href = "profesores.html"><strong>Profesores</strong></a></li>
+		</ul>
+	</nav>
+	<!-- Variable -->
+	<section class = "seccion">
+		<h2>Búsqueda avanzada</h2>
+		<ul id="accordion" class="accordion">
+			<li>
+				<div class = "link"><i class="fa fa-code"></i><strong>Ingeniería de Software</strong><i class="fa fa-chevron-down"></i></div>
+				<ul class = "accordion" id="accordion">
+					{%for ciclo in cursos.software%}
+					<li class="ciclos-0{{forloop.counter}}">
+						<div class = "link"><i class="fa fa-code"></i> <strong>Ciclo {{forloop.counter}}</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class="cursos-0{{forloop.counter}} hover submenu">
+							{%for curso in ciclo%}
+							<li><a href = "{{curso.nombre}}">{{curso.nombre}}</a></li>
+							{%endfor%}
+						</ul>
+					</li>
+					{%endfor%}
+				</ul>
+			</li>
+			<li>
+				<div class = "link"><i class="fa fa-code"></i><strong>Ingeniería de Sistemas</strong><i class="fa fa-chevron-down"></i></div>
+				<ul class = "accordion" id="accordion">
+					{%for ciclo in cursos.sistemas%}
+					<li class="ciclos-0{{forloop.counter}}">
+						<div class = "link"><i class="fa fa-code"></i> <strong>Ciclo {{forloop.counter}}</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class="cursos-0{{forloop.counter}} hover submenu">
+							{%for curso in ciclo%}
+							<li><a href = "{{curso.nombre}}">{{curso.nombre}}</a></li>
+							{%endfor%}
+						</ul>
+					</li>
+					{%endfor%}
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<!-- Centro -->
+	<aside class = "seccion-Informacion">
+		<h2>Búsqueda</h2>
+		<div class = "informacion-OpcionesBusqueda">
+			<h3>Ordenado por: </h3>
+			<ul>
+				<li><a id="boton1" href="#">Todos</a></li>
+				<li><a id="boton2" href="#">Exigencia</a></li>
+				<li><a id="boton3" href="#">Pedagogía</a></li>
+				<li><a id="boton4" href="#">Conocimiento</a></li>
+				<li><a id="boton5" href="#">Pasabilidad</a></li>
+			</ul>
+		</div>
+		<article class = "informacion-Central">
+			<ul class = "central-Lista-1" id = "elected">
+				{%for profesor in rankings.generales reversed%}
+				<li class = "lista-Profesor">
+					<figure>
+						<img class="logo-Imagen" onclick = "True" src="/static/Persona.png">
+					</figure>
+					<div class = "profesor-Descripcion">
+						<h5>{{profesor.nombre}}</h5>
+						{%for curso in profesor.dictado_set.all%}
+							<label>{{curso.curso}}</la.cursobel>
+						{%endfor%}
+					</div>
+					<ul class = "profesor-Caracteristicas">
+						<li>Exigencia <label>{{profesor.exigenciaP}}</label></li>
+						<li>Pedagogía <label>{{profesor.pedagogiaP}}</label></li>
+						<li>Conocimiento <label>{{profesor.conocimientoP}}</label></li>
+						<li>Pasabilidad <label>{{profesor.pasabilidadP}}</label></li>
+					</ul>
+				</li>
+				{%endfor%}
+			</ul>
+			<ul class = "central-Lista-2">
+				{%for profesor in rankings.exigencia reversed%}
+				<li class = "lista-Profesor">
+					<figure>
+						<img class="logo-Imagen" onclick = "True" src="/static/Persona.png">
+					</figure>
+					<div class = "profesor-Descripcion">
+						<h5>{{profesor.nombre}}</h5>
+						{%for curso in profesor.dictado_set.all%}
+							<label>{{curso.curso}}</label>
+						{%endfor%}
+					</div>
+					<ul class = "profesor-Caracteristicas">
+						<li>Exigencia <label>{{profesor.exigenciaP}}</label></li>
+						<li>Pedagogía <label>{{profesor.pedagogiaP}}</label></li>
+						<li>Conocimiento <label>{{profesor.conocimientoP}}</label></li>
+						<li>Pasabilidad <label>{{profesor.pasabilidadP}}</label></li>
+					</ul>
+				</li>
+				{%endfor%}
+			</ul>
+			<ul class = "central-Lista-3">
+				{%for profesor in rankings.pedagogia reversed%}
+				<li class = "lista-Profesor">
+					<figure>
+						<img class="logo-Imagen" onclick = "True" src="/static/Persona.png">
+					</figure>
+					<div class = "profesor-Descripcion">
+						<h5>{{profesor.nombre}}</h5>
+						{%for curso in profesor.dictado_set.all%}
+							<label>{{curso.curso}}</label>
+						{%endfor%}
+					</div>
+					<ul class = "profesor-Caracteristicas">
+						<li>Exigencia <label>{{profesor.exigenciaP}}</label></li>
+						<li>Pedagogía <label>{{profesor.pedagogiaP}}</label></li>
+						<li>Conocimiento <label>{{profesor.conocimientoP}}</label></li>
+						<li>Pasabilidad <label>{{profesor.pasabilidadP}}</label></li>
+					</ul>
+				</li>
+				{%endfor%}
+			</ul>
+			<ul class = "central-Lista-4">
+				{%for profesor in rankings.conocimiento reversed%}
+				<li class = "lista-Profesor">
+					<figure>
+						<img class="logo-Imagen" onclick = "True" src="/static/Persona.png">
+					</figure>
+					<div class = "profesor-Descripcion">
+						<h5>{{profesor.nombre}}</h5>
+						{%for curso in profesor.dictado_set.all%}
+							<label>{{curso.curso}}</label>
+						{%endfor%}
+					</div>
+					<ul class = "profesor-Caracteristicas">
+						<li>Exigencia <label>{{profesor.exigenciaP}}</label></li>
+						<li>Pedagogía <label>{{profesor.pedagogiaP}}</label></li>
+						<li>Conocimiento <label>{{profesor.conocimientoP}}</label></li>
+						<li>Pasabilidad <label>{{profesor.pasabilidadP}}</label></li>
+					</ul>
+				</li>
+				{%endfor%}
+			</ul>
+			<ul class = "central-Lista-5">
+				{%for profesor in rankings.pasabilidad reversed%}
+				<li class = "lista-Profesor">
+					<figure>
+						<img class="logo-Imagen" onclick = "True" src="/static/Persona.png">
+					</figure>
+					<div class = "profesor-Descripcion">
+						<h5>{{profesor.nombre}}</h5>
+						{%for curso in profesor.dictado_set.all%}
+							<label>{{curso.curso}}</label>
+						{%endfor%}
+					</div>
+					<ul class = "profesor-Caracteristicas">
+						<li>Exigencia <label>{{profesor.exigenciaP}}</label></li>
+						<li>Pedagogía <label>{{profesor.pedagogiaP}}</label></li>
+						<li>Conocimiento <label>{{profesor.conocimientoP}}</label></li>
+						<li>Pasabilidad <label>{{profesor.pasabilidadP}}</label></li>
+					</ul>
+				</li>
+				{%endfor%}
+			</ul>
+		</article>
+	</aside>
+	<!-- <footer>
+		<p>©ChichaCode 2013-2020</p>
+	</footer> -->
+
+	<script src="/static/js/jquery.min.js"></script>
+	<script src="/static/js/main.js"></script>
+	<script src="/static/categoriaBusquedaSeleccion.js"></script>
+
+</body>
+</html>

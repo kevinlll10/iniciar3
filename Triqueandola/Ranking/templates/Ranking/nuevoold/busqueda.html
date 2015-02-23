@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="utf-8">
+	<meta name = "description" content = "Triqueando.la">
+	<title>Triqueando.la</title>
+	<link rel="stylesheet" type="text/css" href="/static/estilos.css" />
+	<link rel="stylesheet" type="text/css" href="/static/general.css" />
+	<link rel="stylesheet" type="text/css" href="/static/busqueda.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/static/prefixfree.js">
+
+	</script>
+</head>
+<body>
+	<!-- Constante -->
+	<header class = "cabecera">
+		<figure class = "cabecera-Logo">
+			<img class = "logo-Imagen" onclick = "True" src="/static/Logo.png">
+		</figure>
+		<div class = "cabecera-Buscador">
+			<form action="." method="GET" class = "buscador-Texto">
+				<ul>
+					<li><input type="text" name="busqueda" id="busqueda" placeholder="Buscar"></li>
+					<li><input type="submit" value="Buscar" id="botonBuscar"></li>
+				</ul>
+			</form>
+		</div>
+		<div class = "cabecera-Login">
+			<button><a href = "#">Login</a></button>
+		</div>
+	</header>
+	<nav class = "navegador">
+		<ul class = "navegador-Lista">
+			<li><a href = "../"><strong>Inicio</strong></a></li>
+			<li><a href = "#"><strong>Búsqueda avanzada</strong></a></li>
+			<li><a href = "../profesores.html"><strong>Profesores</strong></a></li>
+		</ul>
+	</nav>
+	<!-- Variable -->
+	<section class = "seccion">
+		<section class = "seccion-Busqueda">
+			<h2>Búsqueda avanzada</h2>
+			<div class = "busqueda-Contenido">
+				<ul = "contenido-Escuela">
+					<li class = "escuela-Software hover" id = "202">
+						<span class="software-Nombre">Ingeniería de Software</span>
+						<ul class="software-Ciclos">
+							{%for ciclo in cursos.software%}
+							<li class="ciclos-0{{forloop.counter}}">
+								<p><a href="#">Ciclo {{forloop.counter}}</a></p>
+								<ul class="cursos-0{{forloop.counter}} hover">
+									{%for curso in ciclo%}
+									<li><a href = "{{curso.nombre}}">{{curso.nombre}}</a></li>
+									{%endfor%}
+								</ul>
+							</li>
+							{%endfor%}
+						</ul>
+					</li>
+					<li>
+						<span>Ingeniería de Sistemas</span>
+						<ul class = "escuela-Sistemas">
+							{%for ciclo in cursos.sistemas%}
+							<li class = "sistemas-Ciclo0{{forloop.counter}}">
+								<p><a href="#">Ciclo {{forloop.counter}}</a></p>
+								<ul>
+									{%for curso in ciclo%}
+									<li><a href="/{{curso.nombre}}">{{curso.nombre}}</a></li>
+									{%endfor%}
+								</ul>
+							</li>
+							{%endfor%}
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- Centro -->
+		<aside class = "seccion-Informacion">
+			<h2>Búsqueda</h2>
+			<nav class = "informacion-OpcionesBusqueda">
+				<h3>Ordenado por: </h3>
+				<ul class = "opcionesBusqueda-Botones">
+					<li><a href="" id="boton1"><strong>Todos</strong></a></li>
+					<li><a href="" id="boton2"><strong>Exigencia</strong></a></li>
+					<li><a href="" id="boton3"><strong>Pedagogía</strong></a></li>
+					<li><a href="" id="boton4"><strong>Conocimiento</strong></a></li>
+					<li><a href="" id="boton5"><strong>Pasabilidad</strong></a></li>
+				</ul>
+			</nav>
+			<section class = "informacion-Central">
+				<ul class = "central-Lista-1">
+					{%for profesor in rankings.generales reversed%}
+					<li>
+						<figure class = "lista-Form">
+							<img class="logo-Imagen" onclick = "True" src="/static/Persona.png">
+						</figure>
+						<div>
+							<!-- Nombre del profesor -->
+							<h5>{{profesor.nombre}}</h5>
+							<!-- Quizás deba ir cursos... -->
+						</div>
+						<div class = "caja-VotosProfesor">
+							<div>
+								<li>Exigencia <strong>{{profesor.exigenciaP}}</strong>
+								</li>
+								<li>Pedagogía <strong>{{profesor.pedagogiaP}}</strong></li>
+								<li>Conocimiento <strong>{{profesor.conocimientoP}}</strong></li>
+								<li>Pasabilidad <strong>{{profesor.pasabilidadP}}</strong></li>
+							</div>
+							<!-- Cantidad de votos -->
+							<div>
+								<p>{{profesor.puntajeP}} votos</p>
+							</div>
+						</div>
+					</li>
+					{%endfor%}
+				</ul>
+				<ul class = "central-Lista-2">
+					{%for profesor in rankings.exigencia reversed%}
+					<li>
+						<figure class = "lista-Form">
+							<img class="logo-Imagen" onclick = "True" src="/static/Persona.png">
+						</figure>
+						<div>
+							<!-- Nombre del profesor -->
+							<h5>{{profesor.nombre}}</h5>
+							<!-- Quizás deba ir cursos... -->
+						</div>
+						<div class = "caja-VotosProfesor">
+							<div>
+								<li>Exigencia <strong>{{profesor.exigenciaP}}</strong>
+								</li>
+								<li>Pedagogía <strong>{{profesor.pedagogiaP}}</strong></li>
+								<li>Conocimiento <strong>{{profesor.conocimientoP}}</strong></li>
+								<li>Pasabilidad <strong>{{profesor.pasabilidadP}}</strong></li>
+							</div>
+							<!-- Cantidad de votos -->
+							<div>
+								<p>{{profesor.puntajeP}} votos</p>
+							</div>
+						</div>
+					</li>
+					{%endfor%}
+				</ul>
+				<ul class = "central-Lista-3">
+					{%for profesor in rankings.pedagogia reversed%}
+					<li>
+						<figure class = "lista-Form">
+							<img class="logo-Imagen" onclick = "True" src="/static/Persona.png">
+						</figure>
+						<div>
+							<!-- Nombre del profesor -->
+							<h5>{{profesor.nombre}}</h5>
+							<!-- Quizás deba ir cursos... -->
+						</div>
+						<div class = "caja-VotosProfesor">
+							<div>
+								<li>Exigencia <strong>{{profesor.exigenciaP}}</strong>
+								</li>
+								<li>Pedagogía <strong>{{profesor.pedagogiaP}}</strong></li>
+								<li>Conocimiento <strong>{{profesor.conocimientoP}}</strong></li>
+								<li>Pasabilidad <strong>{{profesor.pasabilidadP}}</strong></li>
+							</div>
+							<!-- Cantidad de votos -->
+							<div>
+								<p>{{profesor.puntajeP}} votos</p>
+							</div>
+						</div>
+					</li>
+					{%endfor%}
+				</ul>
+				<ul class = "central-Lista-4">
+					{%for profesor in rankings.conocimiento reversed%}
+					<li>
+						<figure class = "lista-Form">
+							<img class="logo-Imagen" onclick = "True" src="/static/Persona.png">
+						</figure>
+						<div>
+							<!-- Nombre del profesor -->
+							<h5>{{profesor.nombre}}</h5>
+							<!-- Quizás deba ir cursos... -->
+						</div>
+						<div class = "caja-VotosProfesor">
+							<div>
+								<li>Exigencia <strong>{{profesor.exigenciaP}}</strong>
+								</li>
+								<li>Pedagogía <strong>{{profesor.pedagogiaP}}</strong></li>
+								<li>Conocimiento <strong>{{profesor.conocimientoP}}</strong></li>
+								<li>Pasabilidad <strong>{{profesor.pasabilidadP}}</strong></li>
+							</div>
+							<!-- Cantidad de votos -->
+							<div>
+								<p>{{profesor.puntajeP}} votos</p>
+							</div>
+						</div>
+					</li>
+					{%endfor%}
+				</ul>
+				<ul class = "central-Lista-5">
+					{%for profesor in rankings.pasabilidad reversed%}
+					<li>
+						<figure class = "lista-Form">
+							<img class="logo-Imagen" onclick = "True" src="/static/Persona.png">
+						</figure>
+						<div>
+							<!-- Nombre del profesor -->
+							<h5>{{profesor.nombre}}</h5>
+							<!-- Quizás deba ir cursos... -->
+						</div>
+						<div class = "caja-VotosProfesor">
+							<div>
+								<li>Exigencia <strong>{{profesor.exigenciaP}}</strong>
+								</li>
+								<li>Pedagogía <strong>{{profesor.pedagogiaP}}</strong></li>
+								<li>Conocimiento <strong>{{profesor.conocimientoP}}</strong></li>
+								<li>Pasabilidad <strong>{{profesor.pasabilidadP}}</strong></li>
+							</div>
+							<!-- Cantidad de votos -->
+							<div>
+								<p>{{profesor.puntajeP}} votos</p>
+							</div>
+						</div>
+					</li>
+					{%endfor%}
+				</ul>
+			</section>
+		</aside>
+	</section>	
+	
+</body>
+</html>

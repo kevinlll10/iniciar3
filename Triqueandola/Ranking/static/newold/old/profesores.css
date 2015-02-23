@@ -1,0 +1,89 @@
+.seccion{
+	padding: 0.5em;
+	margin: 0.5em;
+	background: #E6E6FA;
+}
+
+.seccion-Imagen{
+	float: left;
+}
+
+.seccion-Profesor{
+	float: right;
+}
+
+.articulo{
+	background: #E6E6FA;
+}
+
+.articulo-Descripcion{
+
+}
+
+.articulo-Comentar{
+
+}
+
+.comentar-Imagen{
+	width: 20px;
+	float: left;
+}
+
+.comentar-Formulario{
+	float right;
+	margin: 10em;
+}
+
+.formulario-Form{
+	width: 500px;
+	list-style-type: none;
+	list-style-position: outside;
+	margin: 0px;
+	padding: 0px;
+}
+
+.form-Lista li{
+	list-style: none;
+	display: block;
+	border-bottom: 1px solid #D3D3D3;
+}
+
+.form-Lista li label{
+	display: block;
+}
+
+#exigencia,
+#pedagogia,
+#conocimiento,
+#pasabilidad{
+	width: 150px;
+	-webkit-appearance: none;
+	border-radius: 10px;
+	background: #D3D3D3;
+	height: 20px;
+}
+
+#exigencia::-webkit-slider-thumb,
+#pedagogia::-webkit-slider-thumb,
+#conocimiento::-webkit-slider-thumb,
+#pasabilidad::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	border-radius: 10px;
+	background-color: #778899;
+	height: 15px;
+	width: 10px;
+}
+
+#botonSubmit{
+	border-radius: 5px;
+	padding: 4px;
+	margin: 20px;
+}
+
+#botonSubmit:hover{
+	opacity: 0.85;
+}
+
+.articulo-Comentarios{
+
+}

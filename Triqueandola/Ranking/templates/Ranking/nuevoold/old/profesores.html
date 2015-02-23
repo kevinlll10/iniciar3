@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="utf-8">
+	<meta name = "descripcion" content = "Triqueando.la">
+	<title>Triqueando.la</title>
+	<link rel="stylesheet" type="text/css" href="/static/estilos.css" />
+	<link rel="stylesheet" type="text/css" href="/static/general.css" />
+	<link rel="stylesheet" type="text/css" href="/static/profesores.css">
+	<script src="/static/prefixfree.js"></script>
+</head>
+<body>
+	<!-- Constante -->
+	<header class = "cabecera">
+		<div class = "cabecera-Logo">
+			<img class = "logo-Imagen" onclick = "True" src="/static/Logo.png">
+		</div>
+		<div class = "cabecera-Buscador">
+			<div class = "buscador-Texto">
+				<input type="text" id="busqueda" placeholder="Buscar">
+			</div>
+			<div class = "buscador-Boton">
+				<button>Buscar</button>
+			</div>
+		</div>
+		<div class = "cabecera-Login">
+			<button>Login</button>
+		</div>
+	</header>
+	<nav class = "navegador">
+		<ul class = "navegador-Lista">
+			<li><a href = "home.html">Inicio</a></li>
+			<li><a href = "busqueda.html">Búsqueda avanzada</a></li>
+			<li><a href = "profesores.html">Profesores</a></li>
+		</ul>
+	</nav>
+	<!-- Variable -->
+	<section class = "seccion">
+		</div class = "seccion-Imagen">
+			<img src = "/static/Persona.png">
+		</div>
+		<div class = "seccion-Profesor">
+			<div class = "profesor-Nombre">
+				<h2>{{profesor.nombre}}</h2>
+			</div>
+			<div class = "profesor-PuntajeFinal">
+				<p>Puntaje: <strong>{{profesor.puntajeP}}</strong></p>
+			</div>
+			<div class = "profesor-Cursos">
+				<!-- Mejores cursos -->
+				{%for dictado in profesor.dictado_set.all%}
+					<p>{{dictado.curso}}</p>
+				{%endfor%}
+			</div>
+		</div>
+		<div class = "seccion-Calificacion">
+			<!-- Votos -->
+			<ul class = "calificacion-Votos">
+				<p><strong>Exigencia: </strong> {{profesor.exigenciaP}}</p>
+				<p><strong>Pedadogía: </strong> {{profesor.pedagogiaP}}</p>
+				<p><strong>Conocimiento: </strong> {{profesor.conocimientoP}}</p>
+				<p><strong>Pasabilidad: </strong> {{profesor.pasabilidadP}}</p>
+			</ul>
+		</div>
+	</section>
+	<article class = "articulo">
+		<header class = "articulo-Descripcion">
+			<div>
+				<h2>Comentarios</h2>
+			</div>
+			<div class = "descripcion-CantidadComentario">
+				<!-- Número de comentarios variable -->
+				<p>X Comentarios</p>
+			</div>	
+		</header>
+		<section class = "articulo-Comentar">
+			<div class = "comentar-Imagen">
+				<img src="/static/Persona.png">
+			</div>
+			<div class = "comentar-Formulario">
+				<form class = "formulario-Form" action="." method="POST">
+					<ul class = "form-Lista">
+						<li class="lista-Calificacion">
+								{% csrf_token %}
+								<label for="exigencia">Exigencia: </label>
+								<input type="range" id="exigencia" name="exigencia" min="0" max="20" value="10" required>
+								<label for="pedagogia">Pedagogía: </label>
+								<input type="range" id="pedagogia" name="pedagogia" min="0" max="20" value="10" required>
+								<label for="conocimiento">Conocimiento: </label>
+								<input type="range" id="conocimiento" name="conocimiento" min="0" max="20" value="10" required>
+								<label for="pasabilidad">Pasabilidad: </label>
+								<input type="range" id="pasabilidad"  name="pasabilidad"min="0" max="20" value="10" required>
+								<label for="mensaje">Mensaje:</label>
+								<input type="text" id= "" name="comentario" placeholder="Escribir comentario">
+								<input type="submit" value="Enviar" id="botonSubmit">
+						</li>
+					</ul>
+				</form>
+			</div>
+			<div class = "comentar-Cursos">
+				<p><a href="#">Curso 1</a></p>
+				<p><a href="#">Curso 2</a></p>
+			</div>
+		</section>
+		<article class = "articulo-Comentarios">
+			<ul class = "comentarios-Lista">
+				<li>
+					<figure class = "usuario-Comentario-01">
+						<img src = "/static/Persona.png">
+					</figure>
+					<div class = "comentario-01">
+						<blockquote>Comentario realizado</blockquote>
+					</div>
+				</li>
+			</ul>
+		</article>
+	</article>
+</body>
+</html>

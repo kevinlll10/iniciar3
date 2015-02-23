@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="utf-8">
+	<meta name = "description" content = "Triqueando.la">
+	<title>Triqueando.la</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/static/estilos.css" />
+	<link rel="stylesheet" type="text/css" href="/static/general.css" />
+	<link rel="stylesheet" type="text/css" href="/static/login.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/static/prefixfree.js">
+
+	</script>
+</head>
+<body>
+	<!-- Constante -->
+	<header class = "cabecera">
+		<figure class = "cabecera-Logo">
+			<img class = "logo-Imagen" onclick = "True" src="/static/Logo.png">
+		</figure>
+		<form class = "cabecera-Buscador">
+			<ul>
+				<li><input type="text" id="busqueda" placeholder="Buscar"></li>
+				<li><input type="submit" value="Buscar" id="botonBuscar"></li>
+			</ul>
+		</form>
+		<div class = "cabecera-Botones">
+			<button id="botones-Login"><a href = "login.html">Login</a></button>
+			<button id="botones-Agregar"><a href = "agregarProfesor.html">Agregar profesor</a></button>
+			<button id="botones-Agregar2"><a href = "agregarCurso.html">Agregar curso</a></button>
+		</div>
+	</header>
+	<nav class = "navegador">
+		<ul class = "navegador-Lista">
+			<li><a href = "home.html"><strong>Inicio</strong></a></li>
+			<li><a href = "busqueda.html"><strong>Búsqueda avanzada</strong></a></li>
+			<li><a href = "profesores.html"><strong>Profesores</strong></a></li>
+		</ul>
+	</nav>
+	<!-- variable -->
+	<section class = "seccion">
+		<h2>Login</h2>
+		<form class = "seccion-Formulario" action="." method="POST">
+			{% csrf_token %}
+			{% if form.errors %}
+			<p>Por favor, corrija los siguientes campos:</p>
+			{%endif%}
+
+			{% if form.usuario.errors %}<p>{{form.usuario.errors}}</p>{%endif%}
+			<label for="usuario">Usuario:</label>
+			{{form.usuario}}
+			<br>
+			<br>
+
+			{% if form.contrasena.errors%}<p>form.contrasena.errors</p>{%endif%}
+			<label for="contraseña">Contraseña:</label>
+			{{form.contrasena}}
+			<br>
+			<br>
+			<input type="submit" value="Aceptar" id="botonSubmit">
+		</form>
+	</section>
+</body>
+</html>

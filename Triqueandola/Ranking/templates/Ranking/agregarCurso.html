@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="utf-8">
+	<meta name = "description" content = "Triqueando.la">
+	<title>Triqueando.la</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="estilos.css" />
+	<link rel="stylesheet" type="text/css" href="general.css" />
+	<link rel="stylesheet" type="text/css" href="agregarCurso.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="prefixfree.js">
+
+	</script>
+</head>
+<body>
+	<!-- Constante -->
+	<header class = "cabecera">
+		<figure class = "cabecera-Logo">
+			<img class = "logo-Imagen" onclick = "True" src="Logo.png">
+		</figure>
+		<form class = "cabecera-Buscador">
+			<ul>
+				<li><input type="text" id="busqueda" placeholder="Buscar"></li>
+				<li><input type="submit" value="Buscar" id="botonBuscar"></li>
+			</ul>
+		</form>
+		<div class = "cabecera-Botones">
+			<button id="botones-Login"><a href = "#">Login</a></button>
+			<button id="botones-Agregar"><a href = "agregarProfesor.html">Agregar profesor</a></button>
+			<button id="botones-Agregar2"><a href = "agregarCurso.html">Agregar curso</a></button>
+		</div>
+	</header>
+	<nav class = "navegador">
+		<ul class = "navegador-Lista">
+			<li><a href = "home.html"><strong>Inicio</strong></a></li>
+			<li><a href = "busqueda.html"><strong>Búsqueda avanzada</strong></a></li>
+			<li><a href = "profesores.html"><strong>Profesores</strong></a></li>
+		</ul>
+	</nav>
+	<section class = "seccion">
+		<h2>Solicitud para agregar curso</h2>
+		<form class = "seccion-Formulario">
+			<label for="escuela">Escuela:</label>
+			<select id="escuela" name="escuela">
+				<option>Ingeniería de Software</option>
+				<option>Ingeniería de Sistemas</option>
+			</select>
+			<br>
+			<br>
+			<label for="ciclo">Ciclo:</label>
+			<select id="ciclo" name="ciclo">
+				<option>Ciclo I</option>
+				<option>Ciclo II</option>
+				<option>Ciclo III</option>
+				<option>Ciclo IV</option>
+				<option>Ciclo V</option>
+				<option>Ciclo VI</option>
+				<option>Ciclo VII</option>
+				<option>Ciclo vIII</option>
+				<option>Ciclo IX</option>
+				<option>Ciclo X</option>
+			</select>
+			<br>
+			<br>
+			<label for="curso">Curso:</label>
+			<select id="curso" name="curso">
+				<option>Curso01</option>
+				<option>Curso02</option>
+				<option>Curso03</option>
+				<option>Curso04</option>
+				<option>Curso05</option>
+				<option>Curso06</option>
+			</select>
+			<br>
+			<br>
+			<label for="profesor">Profesor:</label>
+			<select id="profesor" name="profesor">
+				<option>Profesor01</option>
+				<option>Profesor02</option>
+				<option>Profesor03</option>
+			</select>
+			<br>
+			<br>
+			<label for="confirmar">¿Está usted seguro?</label>
+			<input type="submit" value="Enviar" id="botonSubmit">
+		</form>
+	</section>
+</body>
+</html>

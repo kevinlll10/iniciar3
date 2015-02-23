@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="utf-8">
+	<meta name = "description" content = "Triqueando.la">
+	<title>Triqueando.la</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css" />
+	<link rel="stylesheet" type="text/css" href="general.css" />
+	<link rel="stylesheet" type="text/css" href="profesor.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="prefixfree.js">
+
+	</script>
+</head>
+<body>
+	<!-- Constante -->
+	<header class = "cabecera">
+		<figure class = "cabecera-Logo">
+			<img class = "logo-Imagen" onclick = "True" src="Logo.png">
+		</figure>
+		<div class = "cabecera-Buscador">
+			<form class = "buscador-Texto">
+				<ul>
+					<li><input type="text" id="busqueda" placeholder="Buscar"></li>
+					<li><input type="submit" value="Buscar" id="botonBuscar"></li>
+				</ul>
+			</form>
+		</div>
+		<div class = "cabecera-Login">
+			<button><a href = "#">Login</a></button>
+		</div>
+	</header>
+	<nav class = "navegador">
+		<ul class = "navegador-Lista">
+			<li><a href = "home.html"><strong>Inicio</strong></a></li>
+			<li><a href = "busqueda.html"><strong>Búsqueda avanzada</strong></a></li>
+			<li><a href = "profesores.html"><strong>Profesores</strong></a></li>
+		</ul>
+	</nav>
+	<!-- Variable -->
+	<section class = "seccion">
+		</div class = "seccion-Imagen">
+			<img src = "Persona.png">
+		</div>
+		<div class = "seccion-Profesor">
+			<div class = "profesor-Nombre">
+				<h2>Nombre Profesor</h2>
+			</div>
+			<div class = "profesor-Escuela">
+				<p>Escuela Profesor</p>
+			</div>
+			<div class = "profesor-PuntajeFinal">
+				<p>Puntaje: <strong>X puntos</strong></p>
+			</div>
+			<div class = "profesor-Cursos">
+				<!-- Mejores cursos -->
+				<p>Curso 1</p>
+				<p>Curso 2</p>
+			</div>
+		</div>
+		<div class = "seccion-Calificacion">
+			<!-- Votos -->
+			<ul class = "calificacion-Votos">
+				<p><strong>Exigencia: </strong> 20</p>
+				<p><strong>Pedadogía: </strong> 20</p>
+				<p><strong>Conocimiento: </strong> 20</p>
+				<p><strong>Pasabilidad: </strong> 20</p>
+			</ul>
+		</div>
+	</section>
+	<article class = "articulo">
+		<header class = "articulo-Descripcion">
+			<div>
+				<h2>Comentarios</h2>
+			</div>
+			<div class = "descripcion-CantidadComentario">
+				<!-- Número de comentarios variable -->
+				<p>X Comentarios</p>
+			</div>	
+		</header>
+		<section class = "articulo-Comentar">
+			<div class = "comentar-Imagen">
+				<img src="Persona.png">
+			</div>
+			<div class = "comentar-Formulario">
+				<form class = "formulario-Form" action="." method="POST">
+					{% csrf_token %}
+					
+					<ul class = "form-Lista">
+						<!-- <li>
+							<label for="nombre">Nombre: </label>
+							<input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+						</li>
+						<li>
+							<label for="correo">E-mail: </label>
+							<input type="mail" id="correo" placeholder="Ej. nombre@correo.com" required>
+						</li>
+						<li>
+							<label for="edad">Edad: </label>
+							<input type="number" id="edad" min="0" max="100">
+						</li>
+						<li>
+							<label for="fecha">Fecha: </label>
+							<input type="date" id="fecha">
+						</li> -->
+						<li class="lista-Calificacion">
+							<label for="exigencia">Exigencia: </label>
+							<input type="range" id="exigencia" min="0" max="20" value="10" required>
+							<label for="pedagogia">Pedagogía: </label>
+							<input type="range" id="pedagogia" min="0" max="20" value="10" required>
+							<label for="conocimiento">Conocimiento: </label>
+							<input type="range" id="conocimiento" min="0" max="20" value="10" required>
+							<label for="pasabilidad">Pasabilidad: </label>
+							<input type="range" id="pasabilidad" min="0" max="20" value="10" required>
+						</li>
+						<li>
+							<label for="mensaje">Mensaje:</label>
+							<input type="text" id= "" placeholder="Escribir comentario">
+						</li>
+						<li>
+							<input type="submit" value="Enviar" id="botonSubmit">
+						</li>
+					</ul>
+				</form>
+			</div>
+			<div class = "comentar-Cursos">
+				<p><a href="#">Curso 1</a></p>
+				<p><a href="#">Curso 2</a></p>
+			</div>
+		</section>
+		<article class = "articulo-Comentarios">
+			<ul class = "comentarios-Lista">
+				<li>
+					<figure class = "usuario-Comentario-01">
+						<img src = "Persona.png">
+					</figure>
+					<div class = "comentario-01">
+						<textarea placeholder = "Comentario"></textarea>
+					</div>
+				</li>
+				<li>
+					<figure class = "usuario-Comentario-02">
+						<img src = "Persona.png">
+					</figure>
+					<div class = "comentario-02">
+						<textarea></textarea>
+					</div>
+				</li>
+				<li>
+					<figure class = "usuario-Comentario-03">
+						<img src = "Persona.png">
+					</figure>
+					<div class = "comentario-03">
+						<textarea></textarea>
+					</div>
+				</li>
+				<li>
+					<figure class = "usuario-Comentario-04">
+						<img src = "Persona.png">
+					</figure>
+					<div class = "comentario-04">
+						<textarea></textarea>
+					</div>
+				</li>
+				<li>
+					<figure class = "usuario-Comentario-05">
+						<img src = "Persona.png">
+					</figure>
+					<div class = "comentario-05">
+						<textarea></textarea>
+					</div>
+				</li>
+				<li>
+					<figure class = "usuario-Comentario-06">
+						<img src = "Persona.png">
+					</figure>
+					<div class = "comentario-06">
+						<textarea></textarea>
+					</div>
+				</li>
+				<li>
+					<figure class = "usuario-Comentario-07">
+						<img src = "Persona.png">
+					</figure>
+					<div class = "comentario-07">
+						<textarea></textarea>
+					</div>
+				</li>
+				<li>
+					<figure class = "usuario-Comentario-08">
+						<img src = "Persona.png">
+					</figure>
+					<div class = "comentario-08">
+						<textarea></textarea>
+					</div>
+				</li>
+				<li>
+					<figure class = "usuario-Comentario-09">
+						<img src = "Persona.png">
+					</figure>
+					<div class = "comentario-09">
+						<textarea></textarea>
+					</div>
+				</li>
+				<li>
+					<figure class = "usuario-Comentario-10">
+						<img src = "Persona.png">
+					</figure>
+					<div class = "comentario-10">
+						<textarea></textarea>
+					</div>
+				</li>
+			</ul>
+		</article>
+	</article>
+</body>
+</html>

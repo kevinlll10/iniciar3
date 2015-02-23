@@ -1,0 +1,118 @@
+.seccion{
+
+}
+
+/*izquierda*/
+
+.seccion-Busqueda{
+	margin-top: 0.5em;
+	float: left;
+	width: 30%;
+	background: #E6E6FA;
+	border-radius: 10px;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+}
+
+.seccion-Busqueda h2{
+	background: #54738F;
+	color: white;
+	margin: 0em;
+	padding: 0.4em 1em 0.4em 1em;
+	overflow: hidden;
+}
+
+.busqueda-Contenido{
+
+}
+
+.contenido-Escuela{
+
+}
+
+.escuela-Software{
+	vertical-align: baseline;
+}
+
+.escuela-Software li{
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+.escuela-Software li ul{
+	list-style: none;
+}
+
+.escuela-Sistemas{
+
+}
+
+.escuela-Sistemas li{
+
+}
+
+/*centro*/
+.seccion-Informacion{
+	margin-top: 0.5em;
+	float: right;
+	width: 65%;
+	background: #E6E6FA;
+	border-radius: 10px;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+}
+
+.seccion-Informacion h2{
+	background: #54738F;
+	color: white;
+	margin: 0em;
+	padding: 0.4em 1em 0.4em 1em;
+	overflow: hidden;
+}
+
+.informacion-OpcionesBusqueda{
+	border-style: solid;
+	border-width: 1px;
+	color: white;
+	background: #54738F;
+	margin: 0em;
+	padding: 0.2em 1em 0.2em 1em;
+	overflow: hidden;
+}
+
+.opcionesBusqueda-Botones{
+	list-style: none;
+	margin-right: 2em;
+	text-align: center;
+}
+
+.opcionesBusqueda-Botones h2{
+	float: left;
+	width: 10%;
+}
+
+.opcionesBusqueda-Botones ul{
+	float: right;
+	width: 80%;
+	display: inline-block;
+}
+
+.opcionesBusqueda-Botones ul li{
+	margin: 0 0.5em 0 1em;
+	padding: 0.5em 1em;
+	vertical-align: top;
+}
+
+.opcionesBusqueda-Botones li a{
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	border-radius: 1px;
+	-webkit-transition: 0.3s
+}
+
+.opcionesBusqueda-Botones li a:hover{
+	background: #2C5378;
+}
+
+.informacion-Central{
+
+}

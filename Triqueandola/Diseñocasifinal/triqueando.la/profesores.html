@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="utf-8">
+	<meta name = "description" content = "Triqueando.la">
+	<title>Triqueando.la</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="estilos.css" />
+	<link rel="stylesheet" type="text/css" href="general.css" />
+	<link rel="stylesheet" type="text/css" href="profesores.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="prefixfree.js">
+
+	</script>
+</head>
+<body>
+	<!-- Constante -->
+	<header class = "cabecera">
+		<figure class = "cabecera-Logo">
+			<img class = "logo-Imagen" onclick = "True" src="Logo.png">
+		</figure>
+		<form class = "cabecera-Buscador">
+			<ul>
+				<li><input type="text" id="busqueda" placeholder="Buscar"></li>
+				<li><input type="submit" value="Buscar" id="botonBuscar"></li>
+			</ul>
+		</form>
+		<div class = "cabecera-Botones">
+			<button id="botones-Login"><a href = "#">Login</a></button>
+			<button id="botones-Agregar"><a href = "agregarProfesor.html">Agregar profesor</a></button>
+			<button id="botones-Agregar2"><a href = "agregarCurso.html">Agregar curso</a></button>
+		</div>
+	</header>
+	<nav class = "navegador">
+		<ul class = "navegador-Lista">
+			<li><a href = "home.html"><strong>Inicio</strong></a></li>
+			<li><a href = "busqueda.html"><strong>Búsqueda avanzada</strong></a></li>
+			<li><a href = "profesores.html"><strong>Profesores</strong></a></li>
+		</ul>
+	</nav>
+	<!-- Variable -->
+	<section class = "seccion">
+		<h2>Descubre los mejores profesores de la facultad</h2>
+		<div class = "seccion-Clasificacion">
+			<h3>Ranking de profesores (Exigencia)</h3>
+			<div class = "clasificacion-MejoresProfesores">
+				<ul class = "mejoresProfesores-Top">
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p id = "nombre-Prof"><a href="profesorPerfil.html">Profesor01</a></p>
+							<p id = "puntos-Prof"><strong>Puntos</strong></p>
+							<p id = "comentario-Prof">Comentario</p>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p id = "nombre-Prof"><a href="profesorPerfil.html">Profesor02</a></p>
+							<p id = "puntos-Prof"><strong>Puntos</strong></p>
+							<p id = "comentario-Prof">Comentario</p>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p id = "nombre-Prof"><a href="profesorPerfil.html">Profesor03</a></p>
+							<p id = "puntos-Prof"><strong>Puntos</strong></p>
+							<p id = "comentario-Prof">Comentario</p>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p id = "nombre-Prof"><a href="profesorPerfil.html">Profesor04</a></p>
+							<p id = "puntos-Prof"><strong>Puntos</strong></p>
+							<p id = "comentario-Prof">Comentario</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class = "seccion-Clasificacion">
+			<h3>Ranking de profesores (Pedagogía)</h3>
+			<div class = "clasificacion-MejoresProfesores">
+				<ul class = "mejoresProfesores-Top">
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p id = "nombre-Prof"><a href="profesorPerfil.html">Profesor01</a></p>
+							<p id = "puntos-Prof"><strong>Puntos</strong></p>
+							<p id = "comentario-Prof">Comentario</p>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p id = "nombre-Prof"><a href="profesorPerfil.html">Profesor02</a></p>
+							<p id = "puntos-Prof"><strong>Puntos</strong></p>
+							<p id = "comentario-Prof">Comentario</p>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p id = "nombre-Prof"><a href="profesorPerfil.html">Profesor03</a></p>
+							<p id = "puntos-Prof"><strong>Puntos</strong></p>
+							<p id = "comentario-Prof">Comentario</p>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p id = "nombre-Prof"><a href="profesorPerfil.html">Profesor04</a></p>
+							<p id = "puntos-Prof"><strong>Puntos</strong></p>
+							<p id = "comentario-Prof">Comentario</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class = "seccion-Clasificacion">
+			<h3>Ranking de profesores (Pasabilidad)</h3>
+			<div class = "clasificacion-MejoresProfesores">
+				<ul class = "mejoresProfesores-Top">
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p id = "nombre-Prof"><a href="profesorPerfil.html">Profesor01</a></p>
+							<p id = "puntos-Prof"><strong>Puntos</strong></p>
+							<p id = "comentario-Prof">Comentario</p>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p id = "nombre-Prof"><a href="profesorPerfil.html">Profesor02</a></p>
+							<p id = "puntos-Prof"><strong>Puntos</strong></p>
+							<p id = "comentario-Prof">Comentario</p>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p id = "nombre-Prof"><a href="profesorPerfil.html">Profesor03</a></p>
+							<p id = "puntos-Prof"><strong>Puntos</strong></p>
+							<p id = "comentario-Prof">Comentario</p>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p id = "nombre-Prof"><a href="profesorPerfil.html">Profesor04</a></p>
+							<p id = "puntos-Prof"><strong>Puntos</strong></p>
+							<p id = "comentario-Prof">Comentario</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class = "seccion-Clasificacion">
+			<h3>Ranking de profesores (Conocimiento)</h3>
+			<div class = "clasificacion-MejoresProfesores">
+				<ul class = "mejoresProfesores-Top">
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p id = "nombre-Prof"><a href="profesorPerfil.html">Profesor01</a></p>
+							<p id = "puntos-Prof"><strong>Puntos</strong></p>
+							<p id = "comentario-Prof">Comentario</p>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p id = "nombre-Prof"><a href="profesorPerfil.html">Profesor02</a></p>
+							<p id = "puntos-Prof"><strong>Puntos</strong></p>
+							<p id = "comentario-Prof">Comentario</p>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p id = "nombre-Prof"><a href="profesorPerfil.html">Profesor03</a></p>
+							<p id = "puntos-Prof"><strong>Puntos</strong></p>
+							<p id = "comentario-Prof">Comentario</p>
+						</div>
+					</li>
+					<li>
+						<figure>
+							<img src="Persona.png">
+						</figure>
+						<div>
+							<p id = "nombre-Prof"><a href="profesorPerfil.html">Profesor04</a></p>
+							<p id = "puntos-Prof"><strong>Puntos</strong></p>
+							<p id = "comentario-Prof">Comentario</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

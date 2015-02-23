@@ -1,0 +1,14 @@
+<html>
+<head>
+	<title>Tu profesor favodito</title>
+</head>
+<body>
+	<h1><strong>Nombre :</strong>{{profesor.nombre}}</h1>
+	<h2>Cursos:</h2>
+	<ul>
+	{%for curso in profesor.dictado_set.all%}
+		<li>{{curso}}</li>
+	{%endfor%}
+	</ul>
+</body>
+</html>

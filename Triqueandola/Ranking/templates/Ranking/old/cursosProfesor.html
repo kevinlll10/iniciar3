@@ -1,0 +1,13 @@
+<html>
+<head>
+	<title>HOLA</title>
+</head>
+<body>
+	<h1>Cursos de tu profesor favorito</h1>
+	<ul>
+	{%for dictado in cursosProfesor%}
+		<li>{{dictado.curso}} - {{dictado.semestre}}</li>
+	{%endfor%}
+	</ul>
+</body>
+</html>

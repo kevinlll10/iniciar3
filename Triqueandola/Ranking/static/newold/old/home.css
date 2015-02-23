@@ -1,0 +1,117 @@
+/*div*/
+
+.barra{
+	color: #708090;
+	width: 100%;
+}
+
+.barra ul{
+	display: inline-block;
+	list-style: none;
+}
+
+.barra-Eslogan{
+	float: left;
+	text-align: center;
+	width: 80%;
+}
+
+.barra-Registrar{
+	float: right;
+	padding-left: 23em;
+	padding-top: 1.4em;
+	width: 15%;
+}
+
+/*Section*/
+
+.seccion{
+	float: left;
+	margin: 0;
+	padding: 0.2em;
+	width: 67%;
+}
+
+.seccion-FraseCelebre{
+	background: #E6E6FA;
+	float: left;
+	width: 27%;
+}
+
+.seccion-HomeCentral{
+	background: #E6E6FA;
+	float: right;
+	width: 67%;
+}
+
+.homeCentral-Imagen img{
+	width: 92%;
+}
+
+/*aside*/
+
+.aside{
+	float: right;
+	margin: 0.2em;
+	padding: 0.4em;
+	width: 27%;
+}
+
+.aside-RankingResumido{
+	background: #E6E6FA;
+}
+
+.rankingResumido-Botones{
+
+}
+
+.rankingResumido-Contenido{
+
+}
+
+.contenido-Descripcion{
+
+}
+
+.descripcion-Ver{
+
+}
+
+.descripcion-Ver p{
+	float: left;
+}
+
+.descripcion-Ver a{
+	float: right;
+}
+
+/*pading: altura*/
+/*margin: izquierda-derecha*/
+
+.botones-Lista{
+	list-style: none;
+	margin: 0.2em;
+}
+
+.botones-Lista li{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.botones-Lista li a{
+	color: black;
+	display: block;
+	font-size: 14px;
+	text-decoration: none;
+	-webkit-transition: 0.3s
+}
+
+.botones-Lista li a:hover{
+	background: #778899
+}
+
+/*footer*/
+.pie{
+	padding: 40em;
+	width: 50%;
+}

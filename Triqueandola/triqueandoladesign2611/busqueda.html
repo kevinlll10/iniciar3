@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="utf-8">
+	<meta name = "description" content = "Triqueando.la">
+	<title>Triqueando.la</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<link rel="stylesheet" type="text/css" href="general.css" />
+	<link rel="stylesheet" type="text/css" href="busqueda.css">
+
+</head>
+<body>
+	<!-- Constante -->
+	<header class = "cabecera">
+		<figure class = "cabecera-Logo">
+			<img class = "logo-Imagen" onclick = "True" src="Logo.png">
+		</figure>
+		<form class = "cabecera-Buscador">
+			<ul>
+				<li><input type="text" id="busqueda" placeholder="Buscar"></li>
+				<li><input type="submit" value="Buscar" id="botonBuscar"></li>
+			</ul>
+		</form>
+		<div class = "cabecera-Botones">
+			<button id="botones-Login"><a href = "#">Login</a></button>
+			<button id="botones-Agregar"><a href = "agregarProfesor.html">Agregar profesor</a></button>
+			<button id="botones-Agregar2"><a href = "agregarCurso.html">Agregar curso</a></button>
+		</div>
+	</header>
+	<nav class = "navegador">
+		<ul class = "navegador-Lista">
+			<li><a href = "home.html"><strong>Inicio</strong></a></li>
+			<li><a href = "busqueda.html"><strong>Búsqueda avanzada</strong></a></li>
+			<li><a href = "profesores.html"><strong>Profesores</strong></a></li>
+		</ul>
+	</nav>
+	<!-- Variable -->
+	<section class = "seccion">
+		<h2>Búsqueda avanzada</h2>
+		<ul id="accordion" class="accordion">
+			<li>
+				<div class = "link"><i class="fa fa-code"></i><strong>Ingeniería de Software</strong><i class="fa fa-chevron-down"></i></div>
+				<ul class = "accordion" id="accordion">
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo I</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Introducción a la Teoría General de Sistemas</li>
+							<li>Introducción a la Computación e Ingeniería de Software</li>
+							<li>Cálculo I</li>
+							<li>Matemática Básica I</li>
+							<li>Comunicación y Dinámica de Grupo</li>
+							<li>Idioma Extranjero I</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo II</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Programación I</li>
+							<li>Matemáticas Discretas</li>
+							<li>Cálculo II</li>
+							<li>Matemática Básica II</li>
+							<li>Física I</li>
+							<li>Idioma Extranjero II</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo III</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Programación II</li>
+							<li>Series y Ecuaciones Diferenciales</li>
+							<li>Estadística y Probabilidades</li>
+							<li>Física II</li>
+							<li>Organización y Administración</li>
+							<li>Idioma Extranjero III</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo IV</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Análisis y Diseño de Algoritmos</li>
+							<li>Estructura de Datos I</li>
+							<li>Métodos Numéricos</li>
+							<li>Sistemas Digitales</li>
+							<li>Economía para la Gestión</li>
+							<li>Idioma Extranjero IV</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo V</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Base de Datos I</li>
+							<li>Estructura de Datos II</li>
+							<li>Arquitectura de Computadoras</li>
+							<li>Modelamiento y Requisitos de Software</li>
+							<li>Lenguajes y Compiladores</li>
+							<li>Idioma Extranjero V</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo VI</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Base de Datos II</li>
+							<li>Diseño de Software</li>
+							<li>Investigación de Operaciones I</li>
+							<li>Sistemas Operativos</li>
+							<li>Contabilidad de Gestión</li>
+							<li>Idioma Extranjero VI</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo VII</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Arquitectura de Software</li>
+							<li>Taller de Construcción de Software</li>
+							<li>Investigación de Operaciones II</li>
+							<li>Redes y Transmisión de Datos</li>
+							<li>Gerencia de Proyectos de Software</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo VIII</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Inteligencia Artificial</li>
+							<li>Prueba de Software</li>
+							<li>Calidad de Software</li>
+							<li>Seguridad de Redes</li>
+							<li>Gestión de Tecnologías de la Información</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo IX</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Ética Profesional</li>
+							<li>Gestión de Configuración y Mantenimiento</li>
+							<li>Sistemas Inteligentes</li>
+							<li>Proyecto de Tesis I</li>
+							<li>Finanzas para la Gestión</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo X</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Inteligencia de Negocios</li>
+							<li>Proyecto de Tesis II</li>
+							<li>Tendencias en Gestión Empresarial</li>
+							<li>Tendencias en Ingeniería de Software</li>
+							<li>Creatividad y Liderazgo</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class = "link"><i class="fa fa-code"></i><strong>Ingeniería de Sistemas</strong><i class="fa fa-chevron-down"></i></div>
+				<ul class = "accordion" id="accordion">
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo I</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Algoritmica I</li>
+							<li>Matematica I</li>
+							<li>Calculo I</li>
+							<li>Teoria General de Sistemas</li>
+							<li>Computacion e Informatica</li>
+							<li>Taller de Tecnicas de Estudio</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo II</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Algoritmica II</li>
+							<li>Estructura de Datos</li>
+							<li>Calculo II</li>
+							<li>Matemática II</li>
+							<li>Fisica General</li>
+							<li>Economia</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo III</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Algoritmica III</li>
+							<li>Diseño Grafico</li>
+							<li>Estadistica I</li>
+							<li>Electromagnetismo</li>
+							<li>Matematica Discreta</li>
+							<li>Organizacion y Administracion</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo IV</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Tecnicas de Modelamiento</li>
+							<li>Computacion Gráfica</li>
+							<li>Ecuaciones Diferenciales</li>
+							<li>Estadística II</li>
+							<li>Circuitos Digitales</li>
+							<li>Contabilidad General</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo V</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Base de Datos</li>
+							<li>Investigación Operativa I</li>
+							<li>Metodos Numéricos</li>
+							<li>Sistemas Digitales</li>
+							<li>Lenguajes y Traductores</li>
+							<li>Contabilidad Gerencial</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo VI</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Taller de Proyectos I</li>
+							<li>Análisis de Sistemas</li>
+							<li>Investigación Operativa II</li>
+							<li>Transimisión de Datos</li>
+							<li>Arquitectura de Computadoras</li>
+							<li>Sistemas Operativos</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo VII</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Diseño de Interfaces de Usuario</li>
+							<li>Diseño de Sistemas</li>
+							<li>Modelos y Simulación</li>
+							<li>Inteligencia Artificial</li>
+							<li>Redes de Computadoras</li>
+							<li>Ingeniería Económica</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo VIII</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Ingeniería de Información</li>
+							<li>Sistemas Distribuidos</li>
+							<li>Ingeniería de Software</li>
+							<li>Metodología Para la Elaboración de Tesis</li>
+							<li>Taller de Proyectos II</li>
+							<li>Ingeniería de Control</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo IX</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Auditoría y Seguridad Informática</li>
+							<li>Ingeniería de Negocios</li>
+							<li>Marketing2</li>
+							<li>Derecho Informático</li>
+							<li>Proyecto de Tesis I</li>
+							<li>Formulación y Evaluación de Proyectos</li>
+						</ul>
+					</li>
+					<li>
+						<div class = "link"><i class="fa fa-code"></i><strong>Ciclo X</strong><i class="fa fa-chevron-down"></i></div>
+						<ul class = "submenu">
+							<li>Gerencia Informática</li>
+							<li>Tendencias Tecnológicas</li>
+							<li>Gestión de Proyectos Informáticos</li>
+							<li>Proyecto de Tesis II</li>
+							<li>Seminario de la Realidad Peruana</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<!-- Centro -->
+	<aside class = "seccion-Informacion">
+		<h2>Búsqueda</h2>
+		<div class = "informacion-OpcionesBusqueda">
+			<h3>Ordenado por: </h3>
+			<ul>
+				<li><a href="">Exigencia</a></li>
+				<li><a href="">Pedagogía</a></li>
+				<li><a href="">Conocimiento</a></li>
+				<li><a href="">Pasabilidad</a></li>
+			</ul>
+		</div>
+		<article class = "informacion-Central">
+			<ul class = "central-Lista">
+				<li class = "lista-Profesor">
+					<figure>
+						<img class="logo-Imagen" onclick = "True" src="Persona.png">
+					</figure>
+					<div class = "profesor-Descripcion">
+						<h5>Gilberto A. Salinas A.</h5>
+						<label>Curso01</label>
+						<label>Curso01</label>
+					</div>
+					<ul class = "profesor-Caracteristicas">
+						<li>Exigencia <label>20</label></li>
+						<li>Pedagogía <label>20</label></li>
+						<li>Concoimiento <label>20</label></li>
+						<li>Pasabilidad <label>20</label></li>
+					</ul>
+				</li>
+				<li class = "lista-Profesor">
+					<figure>
+						<img class="logo-Imagen" onclick = "True" src="Persona.png">
+					</figure>
+					<div class = "profesor-Descripcion">
+						<h5>Gilberto A. Salinas A.</h5>
+						<label>Curso01</label>
+						<label>Curso01</label>
+					</div>
+					<ul class = "profesor-Caracteristicas">
+						<li>Exigencia <label>20</label></li>
+						<li>Pedagogía <label>20</label></li>
+						<li>Concoimiento <label>20</label></li>
+						<li>Pasabilidad <label>20</label></li>
+					</ul>
+				</li>
+				<li class = "lista-Profesor">
+					<figure>
+						<img class="logo-Imagen" onclick = "True" src="Persona.png">
+					</figure>
+					<div class = "profesor-Descripcion">
+						<h5>Gilberto A. Salinas A.</h5>
+						<label>Curso01</label>
+						<label>Curso01</label>
+					</div>
+					<ul class = "profesor-Caracteristicas">
+						<li>Exigencia <label>20</label></li>
+						<li>Pedagogía <label>20</label></li>
+						<li>Concoimiento <label>20</label></li>
+						<li>Pasabilidad <label>20</label></li>
+					</ul>
+				</li>
+				<li class = "lista-Profesor">
+					<figure>
+						<img class="logo-Imagen" onclick = "True" src="Persona.png">
+					</figure>
+					<div class = "profesor-Descripcion">
+						<h5>Gilberto A. Salinas A.</h5>
+						<label>Curso01</label>
+						<label>Curso01</label>
+					</div>
+					<ul class = "profesor-Caracteristicas">
+						<li>Exigencia <label>20</label></li>
+						<li>Pedagogía <label>20</label></li>
+						<li>Concoimiento <label>20</label></li>
+						<li>Pasabilidad <label>20</label></li>
+					</ul>
+				</li>
+				<li class = "lista-Profesor">
+					<figure>
+						<img class="logo-Imagen" onclick = "True" src="Persona.png">
+					</figure>
+					<div class = "profesor-Descripcion">
+						<h5>Gilberto A. Salinas A.</h5>
+						<label>Curso01</label>
+						<label>Curso01</label>
+					</div>
+					<ul class = "profesor-Caracteristicas">
+						<li>Exigencia <label>20</label></li>
+						<li>Pedagogía <label>20</label></li>
+						<li>Concoimiento <label>20</label></li>
+						<li>Pasabilidad <label>20</label></li>
+					</ul>
+				</li>
+				<li class = "lista-Profesor">
+					<figure>
+						<img class="logo-Imagen" onclick = "True" src="Persona.png">
+					</figure>
+					<div class = "profesor-Descripcion">
+						<h5>Gilberto A. Salinas A.</h5>
+						<label>Curso01</label>
+						<label>Curso01</label>
+					</div>
+					<ul class = "profesor-Caracteristicas">
+						<li>Exigencia <label>20</label></li>
+						<li>Pedagogía <label>20</label></li>
+						<li>Concoimiento <label>20</label></li>
+						<li>Pasabilidad <label>20</label></li>
+					</ul>
+				</li>
+			</ul>
+		</article>
+	</aside>
+	<!-- <footer>
+		<p>©ChichaCode 2013-2020</p>
+	</footer> -->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

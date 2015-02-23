@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="utf-8">
+	<meta name = "descripcion" content = "Triqueando.la">
+	<title>Triqueando.la</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css" />
+	<link rel="stylesheet" type="text/css" href="general.css" />
+	<link rel="stylesheet" type="text/css" href="busqueda.css">
+	<script src="prefixfree.js"></script>
+</head>
+<body>
+	<!-- Constante -->
+	<header class = "cabecera">
+		<div class = "cabecera-Logo">
+			<img class = "logo-Imagen" onclick = "True" src="Logo.png">
+		</div>
+		<div class = "cabecera-Buscador">
+			<div class = "buscador-Texto">
+				<input type="text" id="busqueda" placeholder="Buscar">
+			</div>
+			<div class = "buscador-Boton">
+				<button>Buscar</button>
+			</div>
+		</div>
+		<div class = "cabecera-Login">
+			<button>Login</button>
+		</div>
+	</header>
+	<nav class = "navegador">
+		<ul class = "navegador-Lista">
+			<li><a href = "home.html">Inicio</a></li>
+			<li><a href = "busqueda.html">Búsqueda avanzada</a></li>
+			<li><a href = "profesores.html">Profesores</a></li>
+		</ul>
+	</nav>
+	<!-- Variable -->
+	<section class = "seccion">
+		<section class = "seccion-Busqueda">
+			<div>
+				<h2>Búsqueda avanzada</h2>
+			</div>
+			<div class = "busqueda-Contenido">
+				<div class = "contenido-Escuela" id = "202">
+					<h4><a href="">Ingeniería de Software</a></h4>
+					<ul class = "escuela-Software" style="display: block">
+						<li class = "software-CicloI">
+							<p><a href="#">Ciclo I</a></p>
+							<ul>
+								<li><a href="#">Introducción a la Teoría General de Sistemas</a></li>
+								<li><a href="#">Introducción a la Computación e Ingeniería de Software</a></li>
+								<li><a href="#">Cálculo I</a></li>
+								<li><a href="#">Matemática Básica I</a></li>
+								<li><a href="#">Comunicación y Dinámica de grupos</a></li>
+								<li><a href="#">Idioma Extranjero I</a></li>
+							</ul>
+						</li>
+						<li class = "software-CicloII">
+							<p><a href="#">Ciclo II</a></p>
+							<ul>
+								<li><a href="#">Programación I</a></li>
+								<li><a href="#">Matemática Discreta</a></li>
+								<li><a href="#">Cálculo II</a></li>
+								<li><a href="#">Matemática Básica II</a></li>
+								<li><a href="#">Física I</a></li>
+								<li><a href="#">Idioma Extranjero II</a></li>
+							</ul>
+						</li>
+						<li class = "software-CicloIII">
+							<p><a href="#">Ciclo III</a></p>
+							<ul>
+								<li><a href="#">Programación II</a></li>
+								<li><a href="#">Series y Ecuaciones Diferenciales</a></li>
+								<li><a href="#">Estadística y Probabilidades</a></li>
+								<li><a href="#">Física II</a></li>
+								<li><a href="#">Organización y Administración</a></li>
+								<li><a href="#">Idioma Extranjero III</a></li>
+							</ul>
+						</li>
+						<li class = "software-CicloIV">
+							<p><a href="#">Ciclo IV</a></p>
+							<ul>
+								<li><a href="#">Análisis y Diseño de Algoritmos</a></li>
+								<li><a href="#">Estructura de Datos I</a></li>
+								<li><a href="#">Métodos Numéricos</a></li>
+								<li><a href="#">Sistemas Digitales</a></li>
+								<li><a href="#">Economía para la Gestión</a></li>
+								<li><a href="#">Idioma Extranjero IV</a></li>
+							</ul>
+						</li>
+						<li class = "software-CicloV">
+							<p><a href="#">Ciclo V</a></p>
+							<ul>
+								<li><a href="#">Base de Datos I</a></li>
+								<li><a href="#">Estructura de Datos II</a></li>
+								<li><a href="#">Arquitectura de Computadoras</a></li>
+								<li><a href="#">Modelamiento y Requisitos de Software</a></li>
+								<li><a href="#">Lenguajes y Compiladores</a></li>
+								<li><a href="#">Idioma Extranjero V</a></li>
+							</ul>
+						</li>
+						<li class = "software-CicloVI">
+							<p><a href="#">Ciclo VI</a></p>
+							<ul>
+								<li><a href="#">Base de Datos II</a></li>
+								<li><a href="#">Diseño de Software</a></li>
+								<li><a href="#">Investigación de Operaciones I</a></li>
+								<li><a href="#">Sistemas Operativos</a></li>
+								<li><a href="#">Contabilidad de Gestión</a></li>
+								<li><a href="#">Idioma Extranjero VI</a></li>
+							</ul>
+						</li>
+						<li class = "software-CicloVII">
+							<p><a href="#">Ciclo VII</a></p>
+							<ul>
+								<li><a href="#">Arquitectura de Software</a></li>
+								<li><a href="#">Taller de Construcción de Software</a></li>
+								<li><a href="#">Investigación de Operaciones II</a></li>
+								<li><a href="#">Redes y Transmisión de Datos</a></li>
+								<li><a href="#">Gerencia de Proyectos de Software</a></li>
+							</ul>
+						</li>
+						<li class = "software-CicloVIII">
+							<p><a href="#">Ciclo VIII</a></p>
+							<ul>
+								<li><a href="#">Inteligencia Artificial</a></li>
+								<li><a href="#">Pruebas de Software</a></li>
+								<li><a href="#">Calidad de Software</a></li>
+								<li><a href="#">Seguridad de Redes</a></li>
+								<li><a href="#">Gestión de Tecnologías de la Información</a></li>
+							</ul>
+						</li>
+						<li class = "software-CicloIX">
+							<p><a href="#">Ciclo IX</a></p>
+							<ul>
+								<li><a href="#">Ética Profesional</a></li>
+								<li><a href="#">Gestión de Configuración y Mantenimiento</a></li>
+								<li><a href="#">Sistemas Inteligentes</a></li>
+								<li><a href="#">Proyecto de Tesis I</a></li>
+								<li><a href="#">Finanzas para la Gestión</a></li>
+							</ul>
+						</li>
+						<li class = "software-CicloX">
+							<p><a href="#">Ciclo X</a></p>
+							<ul>
+								<li><a href="#">Inteligencia de Negocios</a></li>
+								<li><a href="#">Proyectos de Tesis II</a></li>
+								<li><a href="#">Tendencias en Gestión Empresarial</a></li>
+								<li><a href="#">Tendencias en Ingeniería de Software</a></li>
+								<li><a href="#">Creatividad y Liderazgo</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class = "contenido-Escuela" id="201">
+					<h4><a href="">Ingeniería de Sistemas</a></h4>
+					<ul class = "escuela-Sistemas">
+						<li class = "sistemas-CicloI">
+							<p><a href="#">Ciclo I</a></p>
+							<ul>
+								<li><a href="#">Algorítmica I</a></li>
+								<li><a href="#">Matemática I</a></li>
+								<li><a href="#">Cálculo I</a></li>
+								<li><a href="#">Teoría General de Sistemas</a></li>
+								<li><a href="#">Computación e Informática</a></li>
+								<li><a href="#">Taller de Técnicas de Estudio</a></li>
+							</ul>
+						</li>
+						<li class = "sistemas-CicloII">
+							<p><a href="#">Ciclo II</a></p>
+							<ul>
+								<li><a href="#">Algorítmica II</a></li>
+								<li><a href="#">Estructura de Datos</a></li>
+								<li><a href="#">Cálculo II</a></li>
+								<li><a href="#">Matemática II</a></li>
+								<li><a href="#">Física General</a></li>
+								<li><a href="#">Economía</a></li>
+							</ul>
+						</li>
+						<li class = "sistemas-CicloIII">
+							<p><a href="#">Ciclo III</a></p>
+							<ul>
+								<li><a href="#">Algorítmica III</a></li>
+								<li><a href="#">Diseño Gráfico</a></li>
+								<li><a href="#">Estadística I</a></li>
+								<li><a href="#">Electromagnetismo</a></li>
+								<li><a href="#">Matemática Discreta</a></li>
+								<li><a href="#">Organización y Administración</a></li>
+							</ul>
+						</li>
+						<li class = "sistemas-CicloIV">
+							<p><a href="#">Ciclo IV</a></p>
+							<ul>
+								<li><a href="#">Técnicas de Modelamiento</a></li>
+								<li><a href="#">Computación Gráfica</a></li>
+								<li><a href="#">Ecuaciones Diferenciales</a></li>
+								<li><a href="#">Estadística II</a></li>
+								<li><a href="#">Circuitos Digitales</a></li>
+								<li><a href="#">Contabilidad General</a></li>
+							</ul>
+						</li>
+						<li class = "sistemas-CicloV">
+							<p><a href="#">Ciclo V</a></p>
+							<ul>
+								<li><a href="#">Base de Datos</a></li>
+								<li><a href="#">Investigación Operativa I</a></li>
+								<li><a href="#">Métodos Numéricos</a></li>
+								<li><a href="#">Sistemas Digitales</a></li>
+								<li><a href="#">Lenguajes y Traductores</a></li>
+								<li><a href="#">Contabilidad Gerencial</a></li>
+							</ul>
+						</li>
+						<li class = "sistemas-CicloVI">
+							<p><a href="#">Ciclo VI</a></p>
+							<ul>
+								<li><a href="#">Taller de Proyectos I</a></li>
+								<li><a href="#">Análisis de Sistemas</a></li>
+								<li><a href="#">Investigación Operativa II</a></li>
+								<li><a href="#">Transmisión de Datos</a></li>
+								<li><a href="#">Arquitectura de Computadoras</a></li>
+								<li><a href="#">Sistemas Operativos</a></li>
+							</ul>
+						</li>
+						<li class = "sistemas-CicloVII">
+							<p><a href="#">Ciclo VII</a></p>
+							<ul>
+								<li><a href="#">Diseño de Interfaces de Usuario</a></li>
+								<li><a href="#">Diseño de Sistemas</a></li>
+								<li><a href="#">Modelos y Simulación</a></li>
+								<li><a href="#">Inteligencia Artificial</a></li>
+								<li><a href="#">Redes de Computadoras</a></li>
+								<li><a href="#">Ingeniería Económica</a></li>
+							</ul>
+						</li>
+						<li class = "sistemas-CicloVIII">
+							<p><a href="#">Ciclo VIII</a></p>
+							<ul>
+								<li><a href="#">Ingeniería de Información</a></li>
+								<li><a href="#">Sistemas Distribuidos</a></li>
+								<li><a href="#">Ingeniería de Software</a></li>
+								<li><a href="#">Metodología para la Elaboración de Tesis</a></li>
+								<li><a href="#">Taller de Proyectos II</a></li>
+								<li><a href="#">Ingeniería de Control</a></li>
+							</ul>
+						</li>
+						<li class = "sistemas-CicloIX">
+							<p><a href="#">Ciclo IX</a></p>
+							<ul>
+								<li><a href="#">Auditoría y Seguridad Informática</a></li>
+								<li><a href="#">Ingeniería de Negocios</a></li>
+								<li><a href="#">Marketing</a></li>
+								<li><a href="#">Derecho Informático</a></li>
+								<li><a href="#">Proyectos de Tesis I</a></li>
+								<li><a href="#">Formulación y Evaluación de Proyectos</a></li>
+							</ul>
+						</li>
+						<li class = "sistemas-CicloX">
+							<p><a href="#">Ciclo X</a></p>
+							<ul>
+								<li><a href="#">Gerencia Informática</a></li>
+								<li><a href="#">Tendencias Tecnológicas</a></li>
+								<li><a href="#">Gestión de Proyectos Informáticos</a></li>
+								<li><a href="#">Proyectos de Tesis II</a></li>
+								<li><a href="#">Seminario de la Realidad Peruana</a></li>
+							<ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- Centro -->
+		<aside class = "seccion-Informacion">
+			<nav class = "informacion-OpcionesBusqueda">
+				<div>
+					<p>Ordenado por: </p>
+				</div>
+				<ul class = "opcionesBusqueda-Botones">
+					<li><a href="">Exigencia</a></li>
+					<li><a href="">Pedagogía</a></li>
+					<li><a href="">Conocimiento</a></li>
+					<li><a href="">Pasabilidad</a></li>
+				</ul>
+			</nav>
+			<section class = "informacion-Central">
+				<ul class = "central-Lista">
+					<li>
+						<div>
+							<img class="logo-Imagen" onclick = "True" src="Persona.png">
+						</div>
+						<div>
+							<!-- Nombre del profesor -->
+							<h5>Gilberto A. Salinas A.</h5>
+							<p>Escuela: </p>
+							<p>Cursos: </p>
+						</div>
+						<div class = "caja-VotosProfesor">
+							<div>
+								<li>Exigencia <strong>20</strong>
+								</li>
+								<li>Pedagogía <strong>20</strong></li>
+								<li>Concoimiento <strong>20</strong></li>
+								<li>Pasabilidad <strong>20</strong></li>
+							</div>
+							<!-- Cantidad de votos -->
+							<div>
+								<p>10 votos</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img class="logo-Imagen" onclick = "True" src="Persona.png">
+						</div>
+						<div>
+							<!-- Nombre del profesor -->
+							<h5>Gilberto A. Salinas A.</h5>
+							<p>Escuela: </p>
+							<p>Cursos: </p>
+						</div>
+						<div class = "caja-VotosProfesor">
+							<div>
+								<li>Exigencia <strong>20</strong>
+								</li>
+								<li>Pedagogía <strong>20</strong></li>
+								<li>Concoimiento <strong>20</strong></li>
+								<li>Pasabilidad <strong>20</strong></li>
+							</div>
+							<!-- Cantidad de votos -->
+							<div>
+								<p>10 votos</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img class="logo-Imagen" onclick = "True" src="Persona.png">
+						</div>
+						<div>
+							<!-- Nombre del profesor -->
+							<h5>Gilberto A. Salinas A.</h5>
+							<p>Escuela: </p>
+							<p>Cursos: </p>
+						</div>
+						<div class = "caja-VotosProfesor">
+							<div>
+								<li>Exigencia <strong>20</strong>
+								</li>
+								<li>Pedagogía <strong>20</strong></li>
+								<li>Concoimiento <strong>20</strong></li>
+								<li>Pasabilidad <strong>20</strong></li>
+							</div>
+							<!-- Cantidad de votos -->
+							<div>
+								<p>10 votos</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img class="logo-Imagen" onclick = "True" src="Persona.png">
+						</div>
+						<div>
+							<!-- Nombre del profesor -->
+							<h5>Gilberto A. Salinas A.</h5>
+							<p>Escuela: </p>
+							<p>Cursos: </p>
+						</div>
+						<div class = "caja-VotosProfesor">
+							<div>
+								<li>Exigencia <strong>20</strong>
+								</li>
+								<li>Pedagogía <strong>20</strong></li>
+								<li>Concoimiento <strong>20</strong></li>
+								<li>Pasabilidad <strong>20</strong></li>
+							</div>
+							<!-- Cantidad de votos -->
+							<div>
+								<p>10 votos</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img class="logo-Imagen" onclick = "True" src="Persona.png">>
+						</div>
+						<div>
+							<!-- Nombre del profesor -->
+							<h5>Gilberto A. Salinas A.</h5>
+							<p>Escuela: </p>
+							<p>Cursos: </p>
+						</div>
+						<div class = "caja-VotosProfesor">
+							<div>
+								<li>Exigencia <strong>20</strong>
+								</li>
+								<li>Pedagogía <strong>20</strong></li>
+								<li>Concoimiento <strong>20</strong></li>
+								<li>Pasabilidad <strong>20</strong></li>
+							</div>
+							<!-- Cantidad de votos -->
+							<div>
+								<p>10 votos</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img class="logo-Imagen" onclick = "True" src="Persona.png">
+						</div>
+						<div>
+							<!-- Nombre del profesor -->
+							<h5>Gilberto A. Salinas A.</h5>
+							<p>Escuela: </p>
+							<p>Cursos: </p>
+						</div>
+						<div class = "caja-VotosProfesor">
+							<div>
+								<li>Exigencia <strong>20</strong>
+								</li>
+								<li>Pedagogía <strong>20</strong></li>
+								<li>Concoimiento <strong>20</strong></li>
+								<li>Pasabilidad <strong>20</strong></li>
+							</div>
+							<!-- Cantidad de votos -->
+							<div>
+								<p>10 votos</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img class="logo-Imagen" onclick = "True" src="Persona.png">
+						</div>
+						<div>
+							<!-- Nombre del profesor -->
+							<h5>Gilberto A. Salinas A.</h5>
+							<p>Escuela: </p>
+							<p>Cursos: </p>
+						</div>
+						<div class = "caja-VotosProfesor">
+							<div>
+								<li>Exigencia <strong>20</strong>
+								</li>
+								<li>Pedagogía <strong>20</strong></li>
+								<li>Concoimiento <strong>20</strong></li>
+								<li>Pasabilidad <strong>20</strong></li>
+							</div>
+							<!-- Cantidad de votos -->
+							<div>
+								<p>10 votos</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img class="logo-Imagen" onclick = "True" src="Persona.png">
+						</div>
+						<div>
+							<!-- Nombre del profesor -->
+							<h5>Gilberto A. Salinas A.</h5>
+							<p>Escuela: </p>
+							<p>Cursos: </p>
+						</div>
+						<div class = "caja-VotosProfesor">
+							<div>
+								<li>Exigencia <strong>20</strong>
+								</li>
+								<li>Pedagogía <strong>20</strong></li>
+								<li>Concoimiento <strong>20</strong></li>
+								<li>Pasabilidad <strong>20</strong></li>
+							</div>
+							<!-- Cantidad de votos -->
+							<div>
+								<p>10 votos</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img class="logo-Imagen" onclick = "True" src="Persona.png">
+						</div>
+						<div>
+							<!-- Nombre del profesor -->
+							<h5>Gilberto A. Salinas A.</h5>
+							<p>Escuela: </p>
+							<p>Cursos: </p>
+						</div>
+						<div class = "caja-VotosProfesor">
+							<div>
+								<li>Exigencia <strong>20</strong>
+								</li>
+								<li>Pedagogía <strong>20</strong></li>
+								<li>Concoimiento <strong>20</strong></li>
+								<li>Pasabilidad <strong>20</strong></li>
+							</div>
+							<!-- Cantidad de votos -->
+							<div>
+								<p>10 votos</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img class="logo-Imagen" onclick = "True" src="Persona.png">
+						</div>
+						<div>
+							<!-- Nombre del profesor -->
+							<h5>Gilberto A. Salinas A.</h5>
+							<p>Escuela: </p>
+							<p>Cursos: </p>
+						</div>
+						<div class = "caja-VotosProfesor">
+							<div>
+								<li>Exigencia <strong>20</strong>
+								</li>
+								<li>Pedagogía <strong>20</strong></li>
+								<li>Concoimiento <strong>20</strong></li>
+								<li>Pasabilidad <strong>20</strong></li>
+							</div>
+							<!-- Cantidad de votos -->
+							<div>
+								<p>10 votos</p>
+							</div>
+						</div>
+					</li>
+			</section>
+		</aside>
+	</section>	
+</body>
+</html>

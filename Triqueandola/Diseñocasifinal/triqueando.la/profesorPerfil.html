@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="utf-8">
+	<meta name = "descripcion" content = "Triqueando.la">
+	<title>Triqueando.la</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="estilos.css" />
+	<link rel="stylesheet" type="text/css" href="general.css" />
+	<link rel="stylesheet" type="text/css" href="profesorPerfil.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="prefixfree.js">
+
+	</script>
+</head>
+<body>
+	<!-- Constante -->
+	<header class = "cabecera">
+		<figure class = "cabecera-Logo">
+			<img class = "logo-Imagen" onclick = "True" src="Logo.png">
+		</figure>
+		<form class = "cabecera-Buscador">
+			<ul>
+				<li><input type="text" id="busqueda" placeholder="Buscar"></li>
+				<li><input type="submit" value="Buscar" id="botonBuscar"></li>
+			</ul>
+		</form>
+		<div class = "cabecera-Botones">
+			<button id="botones-Login"><a href = "#">Login</a></button>
+			<button id="botones-Agregar"><a href = "agregarProfesor.html">Agregar profesor</a></button>
+			<button id="botones-Agregar2"><a href = "agregarCurso.html">Agregar curso</a></button>
+		</div>
+	</header>
+	<nav class = "navegador">
+		<ul class = "navegador-Lista">
+			<li><a href = "home.html"><strong>Inicio</strong></a></li>
+			<li><a href = "busqueda.html"><strong>Búsqueda avanzada</strong></a></li>
+			<li><a href = "profesores.html"><strong>Profesores</strong></a></li>
+		</ul>
+	</nav>
+	<!-- Variable -->
+	<section class = "perfil">
+		<div class = "perfil-Cabeza">
+			<h2>Perfil de Profesor</h2>
+		</div>
+		<figure class = "perfil-imagen">
+			<img  src = "Persona.png">
+		</figure>
+		<div class = "perfil-datos">
+			<h2 class ="perfil-nombre" >Nombre Profesor</h2>
+			<p class = "perfil-puntaje">Puntaje: <strong>X puntos</strong></p>
+		</div>
+		<ul class = "perfil-cursos">
+			<li class = "perfil-cursos-titulo"><strong>Cursos</strong></li>
+			<li>Curso 1</li>
+			<li>Curso 2</li>
+		</ul>
+		<div class = "perfil-puntajes">
+			<!-- Votos -->
+			<ul class = "perfil-puntajes-valores">
+				<p><strong>Exigencia: </strong> 20</p>
+				<p><strong>Pedadogía: </strong> 20</p>
+				<p><strong>Conocimiento: </strong> 20</p>
+				<p><strong>Pasabilidad: </strong> 20</p>
+			</ul>
+		</div>
+	</section>
+	<section class = "comentariosBox">
+		<header class = "comentariosBox-header">
+			<h2>Comentarios <span class = "comentariosBox-descripcion-nroComentarios">(20)</span></h2>
+			<ul>
+				<li><a href="#" class="verTodos" id="verTodos">Ver todos</a></li>
+				<li><a href="#" class="cursoButton" id="boton1">Curso1</a></li>
+				<li><a href="#" class="cursoButton" id="boton2">Curso2</a></li>
+				<li><a href="#" class="cursoButton" id="boton3">Curso3</a></li>
+			</ul>
+		</header>
+		<section class = "comentariosBox-comentariosSet">
+			<div class = "comentariosBox-comentariosSet-box1" id="elected">
+				<article>
+					<h3>Nombre1</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+				<article>
+					<h3>Nombre2</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+				<article>
+					<h3>Nombre3</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+				<article>
+					<h3>Nombre4</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+			</div>
+			<div class = "comentariosBox-comentariosSet-box2">
+				<article>
+					<h3>Nombre5</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+				<article>
+					<h3>Nombre6</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+				<article>
+					<h3>Nombre7</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+				<article>
+					<h3>Nombre8</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+			</div>
+			<div class = "comentariosBox-comentariosSet-box3">
+				<article>
+					<h3>Nombre9</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+				<article>
+					<h3>Nombre10</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+				<article>
+					<h3>Nombre11</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+				<article>
+					<h3>Nombre12</h3>
+					<h3>Curso</h3>
+					<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+						<img src = "Persona.png">
+					</figure>
+					<p>Comentario realizado</p>
+				</article>
+			</div>
+		</section>
+		<section class = "comentariosBox-comentar">
+			<h2>Agregar comentario</h2>
+			<form class = "comentariosBox-form">
+				<label for="exigencia">Exigencia: </label>
+				<input type="range" id="exigencia" min="0" max="20" value="10" required>
+				<br>
+				<br>
+				<label for="pedagogia">Pedagogía: </label>
+				<input type="range" id="pedagogia" min="0" max="20" value="10" required>
+				<br>
+				<br>
+				<label for="conocimiento">Conocimiento: </label>
+				<input type="range" id="conocimiento" min="0" max="20" value="10" required>
+				<br>
+				<br>
+				<label for="pasabilidad">Pasabilidad: </label>
+				<input type="range" id="pasabilidad" min="0" max="20" value="10" required>
+				<br>
+				<br>
+				<input type="radio" id="curso">
+				<label for="curso">Curso01</label>
+				<br>
+				<br>
+				<input type="radio" id="curso">
+				<label form="curso">Curso02</label>
+				<br>
+				<label for="mensaje">Mensaje:</label>
+				<input type="text" id= "comentario" placeholder="Escribir comentario">
+				<input type="submit" value="Enviar" id="botonSubmit">
+			</form>
+		</section>
+	</section>
+	<!-- <footer>
+		<p>©ChichaCode 2013-2020</p>
+	</footer> -->
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="rankingSeleccion.js"></script>
+</body>
+</html>

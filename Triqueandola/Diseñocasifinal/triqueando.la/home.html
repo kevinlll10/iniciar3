@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="utf-8">
+	<meta name = "description" content = "Triqueando.la">
+	<title>Triqueando.la</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="estilos.css" />
+	<link rel="stylesheet" type="text/css" href="general.css" />
+	<link rel="stylesheet" type="text/css" href="home.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="prefixfree.js">
+
+	</script>
+</head>
+<body>
+	<!-- Constante -->
+	<header class = "cabecera">
+		<figure class = "cabecera-Logo">
+			<img class = "logo-Imagen" onclick = "True" src="Logo.png">
+		</figure>
+		<form class = "cabecera-Buscador">
+			<ul>
+				<li><input type="text" id="busqueda" placeholder="Buscar"></li>
+				<li><input type="submit" value="Buscar" id="botonBuscar"></li>
+			</ul>
+		</form>
+		<div class = "cabecera-Botones">
+			<button id="botones-Login"><a href = "#">Login</a></button>
+			<button id="botones-Agregar"><a href = "agregarProfesor.html">Agregar profesor</a></button>
+			<button id="botones-Agregar2"><a href = "agregarCurso.html">Agregar curso</a></button>
+		</div>
+	</header>
+	<nav class = "navegador">
+		<ul class = "navegador-Lista">
+			<li><a href = "home.html"><strong>Inicio</strong></a></li>
+			<li><a href = "busqueda.html"><strong>Búsqueda avanzada</strong></a></li>
+			<li><a href = "profesores.html"><strong>Profesores</strong></a></li>
+		</ul>
+	</nav>
+	<!-- Variable -->
+	<div class = "barra">
+		<h2>Recomienda, valora y encuentra los mejores profesores.</h2>
+		<button><a href="registrar.html">Regístrate</a></button>	
+	</div>
+	<section class = "seccion">
+		<div class = "seccion-FraseCelebre">
+			<h2 id="descripcion">Frase célebre</h2>
+			<h3 id="frase"><em><strong>"Esfúerzate y sé valiente".</strong></em></h3>
+			<h4 id="profesor"><em><strong>Prof. Simpe Laura</strong></em></h4>
+		</div>
+		<div class = "seccion-HomeCentral">
+			<div class = "homeCentral-Presentacion">
+				<h2>Presentación</h2>
+				<figure class = "presentacion-Imagen">
+					<img class = "imagen-Random" onclick = "True" src = "Imagen.jpg">
+				</figure>
+			</div>
+			<div class = "homeCentral-Comentarios">
+				<h2>Últimos comentarios</h2>
+				<section = "comentarios-Seccion">
+					<figure>
+						<img src="Persona.png">
+					</figure>
+					<div>
+						<p>Comentario4</p>
+						<label>sobre <a href="profesor.html">profesor</a></label>
+					</div>
+				</section>
+				<section = "comentarios-Seccion">
+					<figure>
+						<img src="Persona.png">
+					</figure>
+					<div>
+						<p>Comentario4</p>
+						<label>sobre <a href="profesor.html">profesor</a></label>
+					</div>
+				</section>
+				<section = "comentarios-Seccion">
+					<figure>
+						<img src="Persona.png">
+					</figure>
+					<div>
+						<p>Comentario4</p>
+						<label>sobre <a href="profesor.html">profesor</a></label>
+					</div>
+				</section>
+				<section = "comentarios-Seccion">
+					<figure>
+						<img src="Persona.png">
+					</figure>
+					<div>
+						<p>Comentario4</p>
+						<label>sobre <a href="profesor.html">profesor</a></label>
+					</div>
+				</section>
+				<a id="ver" href="profesores.html">Ver todos</a>
+			</div>
+			<div class = "homeCentral-ProfesoresTop">
+				<h2>Profesores más populares</h2>
+				<div>
+					<label>Profesor1</label>
+					<label><strong>votos</strong></label>
+				</div>
+				<div>
+					<label>Profesor2</label>
+					<label><strong>votos</strong></label>
+				</div>
+				<div>
+					<label>Profesor3</label>
+					<label><strong>votos</strong></label>
+				</div>
+				<div>
+					<label>Profesor4</label>
+					<label><strong>votos</strong></label>
+				</div>
+				<a id="ver" href="profesores.html">Ver todos</a>
+			</div>
+		</div>
+	</section>
+	<aside class = "aside">
+		<div class = "aside-RankingResumido">
+			<div class = "rankingResumido-Botones">
+				<a href = "#">Exigencia</a>
+				<a href = "#">Pedagogía</a>
+				<a href = "#">Pasabilidad</a>
+				<a href = "#">Conocimiento</a>
+			</div>
+			<div class = "rakingResumido-Descripcion">
+				<h2>Ránking de Profesores</h2>
+			</div>
+			<div class = "rankingResumido-Clasificacion">
+				<a id="verTodos" href="profesores.html" class = "tabla-VerTodos">Ver todos</a>
+				<div class = "clasificacion-Exigencia">
+					<section class = "clasificacion-Primeros">
+						<h3>Puntaje mayor a 15</h3>
+						<label><a href="profesorPerfil.html">profesor01</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor02</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor03</a></label>
+					</section>
+					<section class = "clasificacion-Segundos">
+						<h3>Puntaje de 11 a 15</h3>
+						<label><a href="profesorPerfil.html">profesor01</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor02</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor03</a></label>
+					</section>
+					<section class = "clasificacion-Terceros">
+						<h3>Puntaje mayor a 15</h3>
+						<label><a href="profesorPerfil.html">profesor01</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor02</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor03</a></label>
+					</section>
+				</div>
+				<!-- <div class = "clasificacion-Pedagogia">
+					<section class = "clasificacion-Primeros">
+						<h3>Puntaje mayor a 15</h3>
+						<label><a href="profesorPerfil.html">profesor01</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor02</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor03</a></label>
+					</section>
+					<section class = "clasificacion-Segundos">
+						<h3>Puntaje de 11 a 15</h3>
+						<label><a href="profesorPerfil.html">profesor01</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor02</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor03</a></label>
+					</section>
+					<section class = "clasificacion-Terceros">
+						<h3>Puntaje mayor a 15</h3>
+						<label><a href="profesorPerfil.html">profesor01</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor02</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor03</a></label>
+					</section>
+				</div>
+				<div class = "clasificacion-Pasabilidad">
+					<section class = "clasificacion-Primeros">
+						<h3>Puntaje mayor a 15</h3>
+						<label><a href="profesorPerfil.html">profesor01</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor02</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor03</a></label>
+					</section>
+					<section class = "clasificacion-Segundos">
+						<h3>Puntaje de 11 a 15</h3>
+						<label><a href="profesorPerfil.html">profesor01</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor02</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor03</a></label>
+					</section>
+					<section class = "clasificacion-Terceros">
+						<h3>Puntaje mayor a 15</h3>
+						<label><a href="profesorPerfil.html">profesor01</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor02</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor03</a></label>
+					</section>
+				</div>
+				<div class = "clasificacion-Conocimiento">
+					<section class = "clasificacion-Primeros">
+						<h3>Puntaje mayor a 15</h3>
+						<label><a href="profesorPerfil.html">profesor01</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor02</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor03</a></label>
+					</section>
+					<section class = "clasificacion-Segundos">
+						<h3>Puntaje de 11 a 15</h3>
+						<label><a href="profesorPerfil.html">profesor01</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor02</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor03</a></label>
+					</section>
+					<section class = "clasificacion-Terceros">
+						<h3>Puntaje mayor a 15</h3>
+						<label><a href="profesorPerfil.html">profesor01</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor02</a></label>
+						<br>
+						<label><a href="profesorPerfil.html">profesor03</a></label>
+					</section>
+				</div> -->
+			</div>
+		</div>
+		<div class = "aside-ComentarioSemana">
+			<h2>Comentario de la semana</h2>
+			<figure>
+				<img src="Persona.png">
+			</figure>
+			<div>
+				<h4>Nombre</h4>
+				<h5>Comentario aquí</h5>
+				<a href="#"><strong>sobre Profesor</strong></a>
+			</div>
+		</div>
+	</aside>
+	<footer>
+		<p>©ChichaCode 2013-2020</p>
+	</footer>
+</body>
+</html>

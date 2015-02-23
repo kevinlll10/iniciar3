@@ -1,0 +1,231 @@
+.perfil{
+	margin: 0.8em 3em;
+	background: #E6E6FA;
+	position: relative;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+	overflow: hidden;
+}
+
+.perfil-Cabeza{
+	border-style: solid;
+	border-width: 1px;
+	color: white;
+	background: #54738F;
+	padding: 0.2em 0 0.2em 1em;
+	overflow: hidden;
+}
+
+.perfil-Cabeza h2{
+	float: left;
+	margin: 0.5em;
+	width: 30%;
+	text-transform: uppercase;
+}
+
+#profesor{
+	padding: 0;
+	border-style: solid;
+	border-width: 1px;
+	color: white;
+	background: #54738F;
+	padding: 0.2em 0 0.2em 1em;
+	overflow: hidden;
+	margin: 0.5em;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+.perfil-cursos{
+	float: left;
+	list-style: none;
+	margin-right: 7em;
+}
+
+.perfil-cursos li{
+	margin: 1em 1em 1em 0;
+}
+
+.perfil-datos{
+	float:left;
+	margin: 2.2em 0em;
+	width: 27%;
+	padding: 0em 0em; 
+}
+
+.perfil-imagen{
+	margin: 2em 0 0 2em;
+	float: left;
+	margin-right: 3em;
+	width: 20%;
+}
+
+.perfil-imagen img{
+	width: 70%;
+}
+.perfil-nombre{
+	margin: 0em 0em;
+}
+
+.perfil-puntaje{
+	margin: 1em 0em 0em 0em;
+}
+
+.perfil-puntajes-valores{
+	float: right;
+	margin-right: 4em;
+}
+
+.comentariosBox-comentariosSet div{
+	display:none;
+}
+
+.comentariosBox-comentariosSet-comentario-imagen img{
+	width: 60px;
+}
+
+#elected{
+	display: block;
+}
+
+
+.comentariosBox{
+	margin: 0.8em 3em;
+	background: #E6E6FA;
+	position: relative;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+	overflow: hidden;
+}
+
+.comentariosBox-header{
+	border-style: solid;
+	border-width: 1px;
+	color: white;
+	background: #54738F;
+	padding: 0.2em 0 0.2em 1em;
+	overflow: hidden;
+}
+
+.comentariosBox-header h2{
+	float: left;
+	margin: 0.5em;
+	width: 30%;
+	text-transform: uppercase;
+}
+
+.comentariosBox-header ul{
+	float: right;
+	margin-right: 5em; 
+	overflow: hidden;
+}
+
+.comentariosBox-header ul li{
+	list-style: none;
+	float: left;
+	vertical-align: top;
+}
+
+.comentariosBox-header ul li a{
+	color: white;
+	text-decoration: none;
+	margin-left: 2em;
+	font-size: 18px;
+	text-transform: uppercase;
+	-webkit-transition: 0.3s;
+}
+
+.comentariosBox-header ul li a:hover{
+	background: #2C5378;
+}
+
+.comentariosBox-comentariosSet{
+	margin: 0em auto;
+	border-bottom: 1px solid black;
+	overflow: hidden;
+}
+
+
+.comentariosBox-comentariosSet article{
+	float: left;
+	width: 45%;
+	padding:1em;
+}	
+
+.comentariosBox-comentariosSet article:nth-child(odd){
+	margin-right: 3%;
+}
+
+.comentariosBox-comentariosSet h3{
+	float: left;
+	width: 40%;
+	margin-left: 0.5em;
+}
+
+.comentariosBox-comentariosSet-comentario-imagen{
+	float: left;
+	margin: 0.5em;
+	width: 20%;
+}
+
+.comentariosBox-comentariosSet-comentario-imagen img{
+	width: 100%;
+}
+
+.comentariosBox-comentariosSet p{
+	float: left;
+	margin-left: 0.5em;
+	width: 70%;
+}
+.comentariosBox-comentar{
+	margin-top: 2em;
+}
+
+.comentariosBox-comentar h2{
+	background: #54738F;
+	color: white;
+	margin: 0em;
+	padding: 1em 1em 1em 1em;
+	overflow: hidden;
+	text-transform: uppercase;
+}
+
+.comentariosBox-form{
+	margin: 2em 0 1em 2em;
+}
+
+#exigencia{
+	float: right;
+	margin-right: 50em;
+}
+
+#pedagogia{
+	float: right;
+	margin-right: 50em;
+}
+
+#conocimiento{
+	float: right;
+	margin-right: 50em;
+}
+
+#pasabilidad{
+	float: right;
+	margin-right: 50em;
+}
+
+#curso{
+	margin-right: 0.5em;
+}
+
+#comentario{
+	width: 400px;
+}
+
+#botonSubmit{
+	border-radius: 5px;
+	padding: 4px;
+	margin: 20px;
+}
+
+#botonSubmit:hover{
+	opacity: 0.9;
+}

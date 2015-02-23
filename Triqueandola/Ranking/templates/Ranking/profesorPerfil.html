@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta charset="utf-8">
+	<meta name = "descripcion" content = "Triqueando.la">
+	<title>Triqueando.la</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/static/estilos.css" />
+	<link rel="stylesheet" type="text/css" href="/static/general.css" />
+	<link rel="stylesheet" type="text/css" href="/static/profesorPerfil.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/static/prefixfree.js"></script>
+</head>
+<body>
+	<!-- Constante -->
+	<header class = "cabecera">
+		<figure class = "cabecera-Logo">
+			<img class = "logo-Imagen" onclick = "True" src="/static/Logo.png">
+		</figure>
+		<form class = "cabecera-Buscador">
+			<ul>
+				<li><input type="text" id="busqueda" placeholder="Buscar"></li>
+				<li><input type="submit" value="Buscar" id="botonBuscar"></li>
+			</ul>
+		</form>
+		<div class = "cabecera-Botones">
+			<button id="botones-Login"><a href = "#">Login</a></button>
+			<button id="botones-Agregar"><a href = "agregarProfesor.html">Agregar profesor</a></button>
+			<button id="botones-Agregar2"><a href = "agregarCurso.html">Agregar curso</a></button>
+		</div>
+	</header>
+	<nav class = "navegador">
+		<ul class = "navegador-Lista">
+			<li><a href = "home.html"><strong>Inicio</strong></a></li>
+			<li><a href = "busqueda.html"><strong>Búsqueda avanzada</strong></a></li>
+			<li><a href = "profesores.html"><strong>Profesores</strong></a></li>
+		</ul>
+	</nav>
+	<!-- Variable -->
+	<section class = "perfil">
+		<div class = "perfil-Cabeza">
+			<h2>Perfil de Profesor</h2>
+		</div>
+		<figure class = "perfil-imagen">
+			<img  src = "/static/Persona.png">
+		</figure>
+		<div class = "perfil-datos">
+			<h2 class ="perfil-nombre" >{{profesor.nombre}}</h2>
+			<p class = "perfil-puntaje">Puntaje: <strong>{{profesor.puntajeP}}</strong></p>
+		</div>
+		<ul class = "perfil-cursos">
+			<li class = "perfil-cursos-titulo"><strong>Cursos</strong></li>
+			{% for dictado in profesor.dictado_set.all reversed%}
+			<li>{{dictado.curso}}</li>
+			{%endfor%}
+		</ul>
+		<div class = "perfil-puntajes">
+			<!-- Votos -->
+			<ul class = "perfil-puntajes-valores">
+				<p><strong>Exigencia: </strong> {{profesor.exigenciaP}}</p>
+				<p><strong>Pedadogía: </strong> {{profesor.pedagogiaP}}</p>
+				<p><strong>Conocimiento: </strong> {{profesor.conocimientoP}}</p>
+				<p><strong>Pasabilidad: </strong> {{profesor.pasabilidadP}}</p>
+			</ul>
+		</div>
+	</section>
+	<section class = "comentariosBox">
+		<header class = "comentariosBox-header">
+			<h2>Comentarios <span class = "comentariosBox-descripcion-nroComentarios">(20)</span></h2>
+			<ul>
+				{% for dictado in profesor.dictado_set.all%}
+				<li><a href="#" class="cursoButton" id="boton{{forloop.counter}}">{{dictado.curso.nombre}}</a></li>
+				{%endfor%}
+			</ul>
+		</header>
+		<section class = "comentariosBox-comentariosSet">
+				{% for dictado in profesor.dictado_set.all %}
+					{% if forloop.first%}
+					<div class = "comentariosBox-comentariosSet-box{{forloop.counter}}" id = "elected">
+						{%for comentario in dictado.comentario_set.all %}
+						<article>
+							<h3>{{comentario.autor}}</h3>
+							<h3>{{comentario.curso}}</h3>
+							<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+								<img src = "/static/Persona.png">
+							</figure>
+							<p>{{comentario.contenido}}</p>
+						</article>
+						{%endfor%}
+					</div>
+					{%else%}
+					<div class = "comentariosBox-comentariosSet-box{{forloop.counter}}">
+						{%for comentario in dictado.comentario_set.all %}
+						<article>
+							<h3>{{comentario.autor}}</h3>
+							<h3>{{comentario.curso}}</h3>
+							<figure class = "comentariosBox-comentariosSet-comentario-imagen">
+								<img src = "/static/Persona.png">
+							</figure>
+							<p>{{comentario.contenido}}</p>
+						</article>
+						{%endfor%}
+					</div>
+					{%endif%}
+				{%endfor%}
+		</section>
+		<section class = "comentariosBox-comentar">
+			<h2>Agregar comentario</h2>
+			<form class = "comentariosBox-form" action="." method="POST">
+				{% csrf_token %}
+				<label for="exigencia">Exigencia: </label>
+				<input type="range" name="exigencia" id="exigencia" min="0" max="20" value="10" required>
+				<br>
+				<br>
+				<label for="pedagogia">Pedagogía: </label>
+				<input type="range" name="pedagogia" id="pedagogia" min="0" max="20" value="10" required>
+				<br>
+				<br>
+				<label for="conocimiento">Conocimiento: </label>
+				<input type="range" name="conocimiento" id="conocimiento" min="0" max="20" value="10" required>
+				<br>
+				<br>
+				<label for="pasabilidad">Pasabilidad: </label>
+				<input type="range" name="pasabilidad" id="pasabilidad" min="0" max="20" value="10" required>
+				<br>
+				<br>
+				
+				<select name="curso">
+				{%for dictado in profesor.dictado_set.all%}
+					<option value="{{dictado.curso.nombre}}">{{dictado.curso}}</option>
+				{%endfor%}
+				</select>
+				<label for="mensaje">Mensaje:</label>
+				<input type="text" name="contenido" id= "comentario" placeholder="Escribir comentario">
+				<input type="submit" value="Enviar" id="botonSubmit">
+			</form>
+		</section>
+	</section>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="/static/cursoSeleccion.js"></script>
+</body>
+</html>

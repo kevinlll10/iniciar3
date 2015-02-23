@@ -1,0 +1,62 @@
+.seccion{
+
+}
+
+/*izquierda*/
+
+.seccion-Busqueda{
+	float: left;
+	width: 30%;
+	background: #E6E6FA;
+}
+
+.busqueda-Contenido{
+
+}
+
+.contenido-Escuela{
+
+}
+
+.escuela-Software{
+
+}
+
+.escuela-Software li{
+
+}
+
+.escuela-Sistemas{
+
+}
+
+.escuela-Sistemas li{
+
+}
+
+/*centro*/
+.seccion-Informacion{
+	float: right;
+	width: 65%;
+	background: #E6E6FA;
+}
+
+.informacion-OpcionesBusqueda{
+
+}
+
+.opcionesBusqueda-Botones{
+
+}
+
+.opcionesBusqueda-Botones li{
+
+}
+
+.opcionesBusqueda-Botones li a{
+
+}
+
+.informacion-Central{
+
+}

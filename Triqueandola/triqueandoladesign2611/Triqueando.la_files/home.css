@@ -1,0 +1,171 @@
+/*div*/
+
+.barra{
+	color: #778899;
+	width: 100%;
+}
+
+.barra ul{
+	display: inline-block;
+	list-style: none;
+}
+
+.barra-Eslogan{
+	float: left;
+	text-align: center;
+}
+
+.barra-Registrar{
+	float: right;
+	padding-left: 23em;
+	padding-top: 1.4em;
+}
+
+/*Section*/
+
+.seccion{
+	float: left;
+	margin: 0;
+	padding: 0.2em;
+	width: 68%;
+}
+
+.seccion-FraseCelebre{
+	background: #E6E6FA;
+	float: left;
+	width: 30%;
+	border-radius: 10px;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+}
+
+.seccion-FraseCelebre h2{
+	margin-top: 1em;
+	margin-left: 1em;
+}
+
+#first{
+	margin-bottom: 1em; 
+	margin-top: 10em;
+}
+
+#second{
+	float: right;
+	margin-bottom: 11em; 
+	margin-right: 1em;
+}
+
+.seccion-HomeCentral{
+	background: #E6E6FA;
+	float: right;
+	margin-left: 1em;
+	width: 68%;
+	border-radius: 10px;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+}
+
+.homeCentral-Comentarios{
+	margin-left: 1em;
+}
+
+.comentarios-Ultimos{
+	list-style: none;
+}
+
+.comentarios-Ultimos li{
+	width: 50%;
+	float: left;
+}
+
+#comentarios-Todos{
+	margin-bottom: 2em;
+}
+
+.homeCentral-Imagen img{
+	margin: 1.5em;
+	margin-top: 2em;
+	width: 90%;
+	border-radius: 10px;
+}
+
+.homeCentral-Comentarios{
+	margin-left: 1em;
+}
+
+.homeCentral-ProfesoresTop{
+	margin-left: 1em;
+}
+
+.ranking-Lista{
+	list-style: none;
+}
+
+.ranking-Lista li{
+	width: 50%;
+	float: left;
+}
+
+/*aside*/
+
+.aside{
+	float: right;
+	margin: 0.2em;
+	padding: 0.4em;
+	width: 28%;
+}
+
+.aside-RankingResumido{
+	background: #E6E6FA;
+	border-radius: 10px;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+}
+
+.rankingResumido-Botones{
+
+}
+
+.rankingResumido-Contenido{
+
+}
+
+.contenido-Descripcion{
+
+}
+
+.descripcion-Ver{
+
+}
+
+.descripcion-Ver p{
+	float: left;
+}
+
+.descripcion-Ver a{
+	float: right;
+}
+
+.botones-Lista{
+	margin: 0.2em;
+}
+
+.botones-Lista li{
+	list-style: none;
+	display: inline-block;
+	/*vertical-align: top;*/
+}
+
+.botones-Lista li a{
+	color: black;
+	display: block;
+	font-size: 14px;
+	text-decoration: none;
+	-webkit-transition: 0.3s
+}
+
+.botones-Lista li a:hover{
+	background: #778899
+}
+
+/*footer*/
+.pie-Pagina{
+
+}

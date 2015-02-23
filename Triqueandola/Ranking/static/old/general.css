@@ -1,0 +1,86 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed);
+
+body{
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 19px;
+	position: relative;
+	margin: 0 auto;
+	min-width: 100px;
+	max-width: 1200px;
+}
+
+/*header*/
+
+.cabecera{
+	background: linear-gradient(to bottom, #778899 0%,#B0C4DE 100%);
+	margin: 0 0;
+	overflow: hidden;
+	padding: 0.5em;
+	position: relative;
+}
+
+.cabecera div{
+	display: inline-block;
+	margin: 0 100px 0 0;
+	padding: 0.5em 1em;
+	vertical-align: top;
+}
+
+.cabecera-Logo{
+	border-right: 1px solid white;
+	margin-right: 0.5em;
+	padding-right: 0.5em;
+}
+
+.cabecera-Logo img{
+	width: 70px;
+	transition: 0.5s;
+}
+
+.cabecera-Logo img:hover{
+	transform: rotate(360deg);
+}
+
+.cabecera-Buscador{
+	padding: 30px 0 0 0;
+}
+
+.cabecera-Login{
+	float: right;
+	padding: 30px 0 0 0;
+}
+
+/*nav*/
+
+.navegador{
+	background: #778899;
+	/*background: linear-gradient(to bottom, #778899 0%,#B0C4DE 100%);*/
+	font-size: 0.9em;
+	position: relative;
+}
+
+.navegador-Lista{
+	list-style: none;
+	padding: 0 6em 0 0.5em;
+	margin: 0;
+}
+
+.navegador-Lista li{
+	display: inline-block;
+	margin: 0 0.5em 0 0;
+	padding: 0.5em 1em;
+	vertical-align: top;
+}
+
+.navegador-Lista li a{
+	color: white;
+	display: block;
+	padding: 0.5em;
+	text-decoration: none;
+	text-transform:uppercase;
+	-webkit-transition: 0.3s;
+}
+
+.navegador-Lista li a:hover{
+	background: #B0C4DE;
+}

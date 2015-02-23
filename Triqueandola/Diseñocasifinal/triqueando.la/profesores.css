@@ -1,0 +1,60 @@
+.seccion{
+}
+
+.seccion h2{
+	margin: 2em 0 2em 1em;
+	font-size: 27px;
+}
+
+.seccion-Clasificacion{
+	background: #E6E6FA;
+	border-radius: 10px;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+	margin: 2em 5em 2em 5em;
+	padding: 0;
+	overflow: hidden;
+}
+
+.seccion-Clasificacion h3{
+	background: #54738F;
+	color: white;
+	padding: 1em 1em 1em 1em;
+	margin: 0em;
+	text-transform: uppercase;
+}
+
+.clasificacion-MejoresProfesores ul{
+	list-style: none;
+}
+
+.clasificacion-MejoresProfesores ul li{
+	float: left;
+	width: 50%;
+}
+
+.mejoresProfesores-Top li figure,
+.mejoresProfesores-Top li div{
+	float: left;
+}
+
+.mejoresProfesores-Top li figure{
+	width: 20%;
+}
+
+.mejoresProfesores-Top li figure img{
+	width: 100%;
+}
+
+.mejoresProfesores-Top li div{
+	padding: 0;
+	margin-left: 2em;
+}
+
+#nombre-Prof,
+#puntos-Prof{
+	float: left;
+}
+
+#puntos-Prof{
+	margin-left: 6em;
+}

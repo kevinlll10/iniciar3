@@ -1,0 +1,139 @@
+.perfil{
+	padding: 1em;
+	margin: 0.5em 3em;
+	background: #E6E6FA;
+	position: relative;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+
+}
+
+.perfil-cursos{
+	float: left;
+	list-style: none;
+	margin-right: 7em;
+}
+
+.perfil-cursos li{
+	margin: 1em 1em 1em 0;
+}
+
+.perfil-datos{
+	float:left;
+	margin: 2.2em 0em;
+	width: 27%;
+	padding: 0em 0em; 
+}
+
+.perfil-imagen{
+	float: left;
+	margin-right: 3em;
+}
+
+.perfil-nombre{
+	margin: 0em 0em;
+}
+
+.perfil-puntaje{
+	margin: 1em 0em 0em 0em;
+}
+
+.comentariosBox-comentariosSet div{
+	display:none;
+}
+
+.comentariosBox-comentariosSet-comentario-imagen img{
+	width: 60px;
+}
+
+#elected{
+	display: block;
+}
+
+
+.comentariosBox{
+	margin: 0.8em 3em;
+	background: #E6E6FA;
+	position: relative;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+	overflow: hidden;
+}
+
+
+.comentariosBox-header{
+	background: #54738F;
+	color: white;
+	padding:0.2em 0.2em 0.2em 0.5em;
+	margin:0em;
+	overflow: hidden;
+}
+
+.comentariosBox-header-descripcion{
+	float: left;
+	width: 20%;
+}
+
+.comentariosBox-header-cursos{
+	width: 50%;
+	float: right;
+}
+
+.comentariosBox-header-cursos ul{
+	list-style: none;
+	margin: 0.5em 0em 0em 0em;
+
+}
+.comentariosBox-header-cursos ul li{
+	display:inline-block;
+	font-size: 1.3em;
+	margin: 0em 1em;
+
+}
+
+.comentariosBox-header-cursos ul li a.disabled {
+	background-color: yellow;
+	cursor: default;
+	box-shadow: none;
+}
+
+.comentariosBox-header-descripcion h2{
+	margin: 0.2em;
+}
+
+.comentariosBox-comentariosSet{
+	margin: 0em auto;
+	border-bottom: 1px solid black;
+	overflow: hidden;
+}
+
+
+.comentariosBox-comentariosSet article{
+	float: left;
+	width: 45%;
+	padding:1em;
+}	
+
+.comentariosBox-comentariosSet article:nth-child(odd){
+	margin-right: 3%;
+}
+
+.comentariosBox-comentariosSet article h3{
+	margin: 0.5em;
+}
+.comentariosBox-comentariosSet article figure{
+	margin: 0.5em;
+}
+
+
+#botonSubmit{
+	border-radius: 5px;
+	padding: 4px;
+	margin: 20px;
+}
+
+#botonSubmit:hover{
+	opacity: 0.9;
+}
+
+.articulo-Comentarios{
+
+}
